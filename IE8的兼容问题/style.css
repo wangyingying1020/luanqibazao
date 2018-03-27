@@ -1,0 +1,27 @@
+#id {
+    border: 1px solid #999;
+    /* 现代浏览器以及使用了IE-CSS3的IE浏览器 */
+    border-radius: 15px;
+    transition: all 1s;
+    /* 现代浏览器以及使用了IE-CSS3的IE浏览器 */
+    /* box-shadow: 10px 10px 20px #000; */
+    /* 通知IE浏览器调用脚本作用于'box'类 */
+    behavior: url(PIE.htc);
+    width: 100px;
+    height: 200px;
+}
+
+#id:hover {
+    position: absolute;
+    transform: translateX(100px);
+}
+
+body {
+    background-color: lightgreen;
+}
+
+@media (max-width: 500px) {
+    body {
+        background: red;
+    }
+}

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./jquery-1.7.1.min.js"></script>
+    <style>
+        ul {
+            list-style: none;
+        }
+        
+        .main {
+            margin: 0 auto;
+        }
+        
+        .w1100 {
+            width: 1100px;
+        }
+        
+        .h600 {
+            height: 600px;
+        }
+        
+        .main .auto_top {
+            height: 35px;
+            display: flex;
+        }
+        
+        .b_1_s_000 {
+            border: 1px solid #000;
+        }
+        
+        .main .auto_top .top_left {
+            width: 80%;
+            border-right: 1px solid #000000;
+            line-height: 35px;
+        }
+        
+        .main .auto_top .top_rigth {
+            width: 18%;
+            box-sizing: border-box;
+            padding-left: 10px;
+            line-height: 35px;
+        }
+        /* 下面部分的样式 */
+        
+        .main .auto_bottom {
+            height: 565px;
+            box-sizing: border-box;
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .main .auto_bottom .bottom_right1 {
+            width: 900px;
+            height: 100%;
+            margin-left: 10px;
+            box-sizing: border-box;
+        }
+        
+        .main .auto_bottom .bottom_right1 .yun {
+            width: 900px;
+            height: 100%;
+        }
+        
+        .main .auto_bottom .bottom_right1 .top {
+            width: 100%;
+            height: 35px;
+            border-bottom: 1px solid #000000;
+            position: relative;
+            top: 0px;
+            left: 0;
+        }
+        
+        .main .auto_bottom .bottom_right1 .top .btns {
+            position: absolute;
+            top: 5px;
+            right: 0;
+        }
+        
+        .main .auto_bottom .bottom_right1 .top button {
+            width: 45px;
+            height: 25px;
+            margin-right: 10px;
+        }
+        
+        .main .auto_bottom .bottom_right1 .bottom {
+            width: 100%;
+            display: flex;
+        }
+        
+        .main .auto_bottom .bottom_right1 .bottom .list_tab {
+            width: 185px;
+        }
+        
+        .main .auto_bottom .bottom_right1 .bottom .list_tab img {
+            width: 10px;
+            height: 10px;
+        }
+        
+        .main .auto_bottom .bottom_right1 .bottom .list_tab ul.one {
+            padding: 0;
+            margin: 0;
+            padding-left: 10px;
+            padding-top: 20px;
+        }
+        
+        .main .auto_bottom .bottom_right1 .bottom .list_tab ul {
+            display: inline-block;
+            width: 100%;
+        }
+        
+        .main .auto_bottom .bottom_right1 .bottom .list_tab ul li {
+            width: 100%;
+            /*  height: 25px; */
+            line-height: 25px;
+        }
+        
+        .main .auto_bottom .bottom_right1 .bottom .list_con {
+            padding-top: 30px;
+        }
+        
+        .main .auto_bottom .bottom_right1 .bottom .list_con .btns {
+            width: 400px;
+            padding-left: 20px;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+        }
+        
+        .main .auto_bottom .bottom_right1 .bottom .list_con .btns button {
+            width: 55px;
+            height: 25px;
+            border-radius: 5px;
+        }
+        
+        .main .auto_bottom .bottom_right1 .bottom .list_con .hh {
+            width: 400px;
+            height: 400px;
+        }
+        
+        .main .auto_bottom .bottom_right1 .bottom .list_con .hh label {
+            display: inline-block;
+            width: 100px;
+            padding-left: 10px;
+        }
+        
+        .main .auto_bottom .bottom_right1 .bottom .list_con .hh input[type=text] {
+            width: 200px;
+            height: 25px;
+            line-height: 25px;
+            border-radius: 5px;
+        }
+        
+        .main .auto_bottom .bottom_right1 .bottom .list_con .hh select {
+            width: 203px;
+            height: 25px;
+            line-height: 25px;
+            border-radius: 5px;
+        }
+        
+        .main .auto_bottom .bottom_right1 .bottom .list_con .hh .lala {
+            height: 25px;
+            line-height: 25px;
+        }
+        
+        .main .auto_bottom .bottom_right1 .bottom .list_con .hh .lala span {
+            margin-left: -8px;
+        }
+        
+        .main .auto_bottom .bottom_left {
+            width: 190px;
+            box-sizing: border-box;
+        }
+        
+        .main .auto_bottom .bottom_left ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            line-height: 35px;
+            text-align: center;
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        .main .auto_bottom .bottom_left ul li {
+            cursor: pointer;
+        }
+        
+        .tab_xz {
+            background: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main w1100 h600">
+        <div class="auto_top w1100 b_1_s_000 ">
+            <div class="top_left">系统维护界面</div>
+            <div class="top_rigth">管理员:xx &nbsp; 日期:xx</div>
+        </div>
+        <div class="auto_bottom w1100">
+            <div class="bottom_left ">
+                <ul class="b_1_s_000">
+                    <li>阻止机构维护</li>
+                    <li>阻止机构维护</li>
+                    <li>阻止机构维护</li>
+                    <li>阻止机构维护</li>
+                </ul>
+            </div>
+            <div class="bottom_right1 b_1_s_000">
+                <div class="yun">
+                    <div class="top">
+                        <div class="btns">
+                            <button class="b_1_s_000">栏目</button>
+                            <button class="b_1_s_000">布局</button>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="list_tab">
+                            <ul class="one">
+                                <li>
+                                    <img src="./img/减号.png" alt="">
+                                    <span>根目录</span>
+                                    <ul class="two">
+                                        <li>
+                                            <img src="./img/减号.png" alt="">
+                                            <span>信息类</span>
+                                            <ul class="two_find">
+                                                <li>
+                                                    <span>新闻摘要</span>
+                                                </li>
+                                                <li>
+                                                    <span>新闻摘要</span>
+                                                </li>
+                                                <li>
+                                                    <span>新闻摘要</span>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <img src="./img/减号.png" alt="">
+                                            <span>公告类</span>
+                                            <ul class="two_find">
+                                                <li>
+                                                    <span>新闻摘要</span>
+                                                </li>
+                                                <li>
+                                                    <span>新闻摘要</span>
+                                                </li>
+                                                <li>
+                                                    <span>新闻摘要</span>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <img src="./img/减号.png" alt="">
+                                            <span>工作政务</span>
+                                            <ul class="two_find">
+                                                <li>
+                                                    <span>新闻摘要</span>
+                                                </li>
+                                                <li>
+                                                    <span>新闻摘要</span>
+                                                </li>
+                                                <li>
+                                                    <span>新闻摘要</span>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="list_con">
+                            <div class="btns">
+                                <button class="b_1_s_000">新建</button>
+                                <button class="b_1_s_000">新建</button>
+                                <button class="b_1_s_000">新建</button>
+                            </div>
+                            <div class="b_1_s_000 hh">
+
+                                <p>
+                                    <label for="">栏目标识</label>
+                                    <input type="text" class="b_1_s_000">
+                                </p>
+                                <p>
+                                    <label for="">栏目标识</label>
+                                    <input type="text" class="b_1_s_000">
+                                </p>
+                                <p>
+                                    <label for="">栏目标识</label>
+                                    <span class="lala">
+                                                <input type="radio" name="" id="">
+                                                <span>85*58</span>
+                                    <input type="radio" name="" id="">
+                                    <span>85*58</span>
+                                    <input type="radio" name="" id="">
+                                    <span>85*58</span>
+                                    </span>
+                                </p>
+                                <p>
+                                    <label for="">栏目标识</label>
+                                    <select name="" id="" class="b_1_s_000">
+                                                <option value="q2wee"></option>
+                                                <option value="sjsj"></option>
+                                                <option value="jdjsjd"></option>
+                                            </select>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="yun">hdsahdhksahd</div>
+                <div class="yun">回家大家都加班d</div>
+                <div class="yun">hdsahdh大声道撒玉蝴蝶吧ksahd</div>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script>
+    $(function() {
+        var i = 0;
+        var tab_list = $(".main .auto_bottom .bottom_left ul li");
+        var tab_content = $(".main .auto_bottom .bottom_right1 .yun");
+        tab_list.eq(i).addClass("tab_xz").siblings().removeClass("tab_xz");
+        tab_content.eq(i).show().siblings().hide();
+        tab_list.click(function() {
+            i = $(this).index();
+            $(this).addClass("tab_xz").siblings().removeClass("tab_xz");
+            tab_content.eq(i).show().siblings().hide();
+        });
+
+
+
+        /* //点击tab切换
+        $(".main .auto_bottom .bottom_left ul li").click(function() {
+
+        }) */
+    })
+</script>
+
+</html>

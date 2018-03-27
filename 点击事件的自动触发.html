@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn" onclick="add()">点击我</button>
+</body>
+<script>
+    function add() {
+        alert("abc")
+    }
+    setTimeout(function() {
+        // IE
+        if (document.all) {
+            document.getElementById("btn").click();
+        }
+        // 其它浏览器
+        else {
+            var e = document.createEvent("MouseEvents");
+            e.initEvent("click", true, true);
+            document.getElementById("btn").dispatchEvent(e);
+        }
+    }, 2);
+</script>
+<!-- <a href="#" id="clickMe" onclick="">link</a> -->
+</script>
+
+</html>

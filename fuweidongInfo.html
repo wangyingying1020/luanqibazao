@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./jQueryTime/css/ion.calendar.css">
+    <link rel="stylesheet" href="./lib/slider-141121152815/css/jquery.slideBox.css">
+    <script src="./lib/jquery-1.7.1.min.js"></script>
+    <script src="./jQueryTime/js/moment.min.js"></script>
+    <script src="./jQueryTime/js/moment.zh-cn.js"></script>
+    <script src="./jQueryTime/js/ion.calendar.js"></script>
+    <script src="./lib/slider-141121152815/js/jquery.slideBox.js"></script>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .main {
+            width: 1366px;
+            height: 100%;
+            background: url("./fuweidongImg/bg3.png") no-repeat;
+            padding: 0;
+            margin: 0 auto;
+            /* position: absolute; */
+            background-size: cover;
+        }
+        
+        .main .top {
+            width: 1190px;
+            /* height: 100px; */
+            margin: 0 auto;
+            /* background: #ffffff; */
+            margin-top: 25px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .main .top .left {
+            width: 500px;
+            height: 100px;
+        }
+        
+        .main .top .left img {
+            width: 500px;
+            height: 100px;
+        }
+        
+        .main .top .right {
+            position: relative;
+            top: 30px;
+            left: 0;
+            margin-right: 10px;
+        }
+        
+        .main .top .right .r_top {
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+        
+        .main .top .right .r_top input {
+            width: 340px;
+            height: 35px;
+            outline: none;
+            border: 2px solid #cccccc;
+            margin-bottom: 10px;
+            /* box-shadow: 2px 2px 10px #ccc; */
+            border-radius: 25px;
+        }
+        
+        .main .top .right .r_top img {
+            width: 35px;
+            position: absolute;
+            top: 2px;
+            right: 10px;
+        }
+        
+        .main .top .right .r_bottom {
+            display: flex;
+            justify-content: space-around;
+            font-family: 微软雅黑;
+            height: 30px;
+            /* line-height: 20px; */
+            color: #ffffff;
+        }
+        
+        .main .top .right .r_bottom input {
+            width: 20px;
+            height: 20px;
+        }
+        
+        .main .top .right .r_bottom span {
+            position: relative;
+            top: -4px;
+        }
+        /* ------------------------------------------- */
+        
+        .main .tb_list {
+            width: 1190px;
+            height: 50px;
+            margin: 0 auto;
+            background: #1B80D8;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        
+        .main .tb_list .left {
+            height: 50px;
+            /* margin-left: 10px; */
+        }
+        
+        .main .tb_list .left ul {
+            list-style: none;
+            /* display: flex;
+            justify-content: space-around; */
+            height: 50px;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .main .tb_list .left ul li {
+            width: 150px;
+            height: 50px;
+            /* background: red; */
+            line-height: 50px;
+            float: left;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 900;
+            font-family: 微软雅黑;
+            color: #ffffff;
+            cursor: pointer;
+        }
+        
+        .tab {
+            background: #0A61AE;
+        }
+        
+        .main .tb_list .right {
+            margin-right: 10px;
+        }
+        
+        .main .tb_list .right span {
+            display: inline-block;
+            height: 50px;
+            line-height: 50px;
+            font-size: 14px;
+            font-weight: 500;
+            font-family: 微软雅黑;
+            color: #ffffff;
+        }
+        /* ----------------------------------------------------------------------------- */
+        /* --------tab切换展示 -------------*/
+        
+        .main .tab_content div.show {
+            display: block;
+        }
+        
+        .main .tab_content {
+            width: 1190px;
+            margin: 0 auto;
+        }
+        
+        .main .tab_content .tab1 {
+            display: none;
+        }
+        /* ------------首页内容样式 start -------- */
+        
+        .main .tab_content .home_page {
+            width: 1190px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+        }
+        
+        .main .tab_content .home_page .sy_top {
+            width: 1190px;
+            height: 310px;
+            padding: 23px 29px;
+            background: #fff;
+            box-sizing: border-box;
+            display: flex;
+        }
+        /* 首页上部左侧内容 start */
+        
+        .main .tab_content .home_page .sy_top .sy_left {
+            margin-right: 25px;
+        }
+        /* 轮播图 */
+        /* 首页上部左侧内容 end */
+        /* 首页上部右侧内容 start  */
+        
+        .main .tab_content .home_page .sy_top .sy_right {
+            width: 59%;
+            border: 1px solid #cccccc;
+        }
+        
+        .main .tab_content .home_page .sy_top .sy_right .right_top {
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            box-sizing: border-box;
+            border-bottom: 2px solid #cccccc;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .main .tab_content .home_page .sy_top .sy_right .right_top .right_top_left {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            font-size: 18px;
+            font-family: "微软雅黑";
+        }
+        
+        .main .tab_content .home_page .sy_top .sy_right .right_top .tab_li {
+            width: 155px;
+            text-align: center;
+        }
+        
+        .click_li {
+            border-bottom: 2px solid #238eeb;
+            color: #238eeb;
+            /* box-sizing: border-box; */
+            line-height: 48px;
+            height: 48px;
+        }
+        
+        .main .tab_content .home_page .sy_top .sy_right .right_top .right_top_right {
+            width: 40px;
+            height: 20px;
+            font-size: 14px;
+            color: #878787;
+            font-family: "微软雅黑";
+            border: 1px solid #878787;
+            position: relative;
+            top: 16px;
+            line-height: 20px;
+            text-align: center;
+            right: 20px;
+        }
+        /* 首页上部右侧内容 end  */
+        /* ------------首页内容样式 end -----------  */
+        /* ----------内容区域样式  start --------- */
+        
+        .main .conten {
+            width: 1190px;
+            background: #EFFCF5;
+            /* height: 750px; */
+            margin: 0 auto;
+            padding-top: 10px;
+            box-sizing: border-box;
+            /* padding: 10px 10px 10px 0px; */
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .main .conten .left {
+            width: 320px;
+            height: 100%;
+            /* background: red; */
+            box-shadow: 5px;
+        }
+        
+        .main .conten .left .l_top {
+            width: 100%;
+            height: 130px;
+            /* background: yellowgreen; */
+            margin-bottom: 10px;
+            box-shadow: 2px 2px 10px #cccccc;
+        }
+        
+        .main .conten .left .l_top .info {
+            width: 100%;
+            height: 100%;
+            /* background: #ffffff; */
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .main .conten .left .l_top .info .tx_info {
+            display: flex;
+            justify-content: flex-start;
+            width: 270px;
+            background: #1B80D8;
+            height: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+        
+        .main .conten .left .l_top .info .tx_info img {
+            width: 75px;
+            height: 88px;
+            /* vertical-align: top; */
+            position: relative;
+            top: 12px;
+        }
+        
+        .main .conten .left .l_top .info .tx_info div {
+            height: 100%;
+            padding-top: 25px;
+        }
+        
+        .main .conten .left .l_top .info .tx_info p {
+            font-size: 24px;
+            font-weight: 900;
+            font-family: 微软雅黑;
+            color: #ffffff;
+            padding-left: 10px;
+            margin: 0;
+            /* padding: 0; */
+            line-height: 35px;
+        }
+        
+        .main .conten .left .l_top .info .tx_info span {
+            font-size: 14px;
+            font-weight: 500;
+            font-family: 微软雅黑;
+            color: #ffffff;
+            padding-left: 10px;
+        }
+        /* ----------------------------- */
+        
+        .main .conten .left .l_top .info .icon {
+            width: 50px;
+            height: 100%;
+            background: #ffffff;
+        }
+        
+        .main .conten .left .l_top .info .icon img {
+            width: 30px;
+            margin-bottom: 8px;
+            padding-top: 5px;
+            padding-left: 8px;
+            cursor: pointer;
+        }
+        /* ------------------------------ */
+        
+        .main .conten .left .l_conten {
+            width: 320px;
+            /* height: 350px; */
+            /* border: 1px solid #cccccc; */
+            margin-bottom: 10px;
+            box-shadow: 2px 2px 10px #cccccc;
+        }
+        
+        .main .conten .left .l_conten .title {
+            width: 100%;
+            background: #ffffff;
+            height: 30px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .main .conten .left .l_conten .title div {
+            height: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        
+        .main .conten .left .l_conten .title img {
+            width: 20px;
+            height: 20px;
+            padding-top: 5px;
+        }
+        
+        .main .conten .left .l_conten .title span {
+            position: relative;
+            top: -5px;
+            font-family: 微软雅黑;
+            color: #1981D8;
+        }
+        
+        .main .conten .left .l_conten .date {
+            width: 320px;
+            /* padding: 10px; */
+            background-color: #efefef;
+        }
+        
+        .main .conten .left .l_bottom {
+            width: 320px;
+            /* height: 230px; */
+            /* border: 1px solid #cccccc; */
+            box-sizing: border-box;
+            border: 1px solid #cccccc;
+            box-shadow: 2px 2px 10px #cccccc;
+        }
+        
+        .main .conten .left .l_bottom .title {
+            width: 100%;
+            background: #E3F3FF;
+            height: 40px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #cccccc;
+        }
+        
+        .main .conten .left .l_bottom .title div {
+            height: 40px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        
+        .main .conten .left .l_bottom .title img {
+            width: 20px;
+            height: 20px;
+            padding-top: 10px;
+        }
+        
+        .main .conten .left .l_bottom .title span {
+            position: relative;
+            top: -5px;
+            font-family: 微软雅黑;
+            color: #1981D8;
+        }
+        
+        .main .conten .left .l_bottom .list {
+            width: 320px;
+            /* box-sizing: border-box;
+            border: 1px solid #cccccc; */
+            padding-top: 10px;
+            font-family: 微软雅黑;
+            font-size: 13px;
+            background: #fff;
+            padding-bottom: 10px;
+        }
+        
+        .main .conten .left .l_bottom .list ul {
+            list-style: none;
+            display: flex;
+            /* justify-content: center; */
+            width: 320px;
+            flex-wrap: wrap;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .main .conten .left .l_bottom .list ul li {
+            display: inline-block;
+            width: 95px;
+            /* padding-left: 25px; */
+            text-align: center;
+            cursor: pointer;
+            margin-bottom: 20px;
+            transition: all 0.5s;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+        
+        .main .conten .left .l_bottom .list ul li img:hover {
+            transform: scale(1.2);
+        }
+        
+        .main .conten .left .l_bottom .list ul li img {
+            width: 65px;
+        }
+        
+        .main .conten .right {
+            width: 850px;
+            border: 1px solid #000000;
+            height: 775px;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+        
+        .ic__prev,
+        .ic__next {
+            background-color: #1B80D8;
+        }
+        
+        .ic__header {
+            background-color: #1B80D8;
+        }
+        
+        .ic__header select {
+            border: none;
+        }
+        /* 遮罩层 */
+        
+        .right .list {
+            width: 100%;
+            /* box-sizing: border-box;
+            border: 1px solid #cccccc; */
+            padding-top: 10px;
+            font-family: 微软雅黑;
+            font-size: 13px;
+            /* background: #fff; */
+            padding-bottom: 10px;
+            height: 70%;
+            display: none;
+        }
+        
+        .right .list ul {
+            list-style: none;
+            /* display: flex; */
+            /* justify-content: space-between; */
+            float: left;
+            width: 100%;
+            flex-wrap: wrap;
+            padding: 0;
+            /* margin: 0 20px; */
+            margin: 0;
+            margin-left: 35px;
+        }
+        
+        .right ul li {
+            display: inline-block;
+            /* padding-left: 25px; */
+            text-align: center;
+            cursor: pointer;
+            margin-bottom: 20px;
+            transition: all 0.5s;
+            padding-left: 15px;
+            padding-right: 15px;
+            /* border: none; */
+        }
+        
+        .abc {
+            border: 1px solid #000;
+        }
+        /* .right ul li img:hover {
+            transform: scale(1.2);
+        }
+         */
+        
+        .right ul li img {
+            width: 95px;
+        }
+        
+        .right .btn {
+            width: 100%;
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        
+        .right .btn button {
+            width: 100px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            font-size: 16px;
+            border: none;
+            font-family: "微软雅黑";
+            background: #1B80D8;
+            border-radius: 10px;
+            color: #fff;
+            font-weight: 700;
+            outline: none;
+        }
+        /* ----------------内容区域样式  end----------- */
+        /* --------------大数据区域内容样式   start---------- */
+        
+        .main .data_show {
+            width: 1190px;
+            margin: 0 auto;
+        }
+        /* --------------大数据区域内容样式   end---------- */
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="top">
+            <div class="left">
+                <img src="./fuweidongImg/海南出入境办公系统.png" alt="">
+            </div>
+            <div class="right">
+                <div class="r_top">
+                    <input type="text">
+                    <img src="./fuweidongImg/ss.png" alt="">
+                </div>
+                <div class="r_bottom">
+                    <label for="one">
+                        <input type="checkbox" id="one">
+                        <span>OA系统</span>
+                    </label>
+                    <label for="two">
+                            <input type="checkbox" id="two">
+                            <span>OA系统</span>
+                    </label>
+                    <label for="three">
+                            <input type="checkbox" id="three">
+                            <span>OA系统</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="tb_list">
+            <div class="left">
+                <ul>
+                    <li class="tab">首页</li>
+                    <li>工作办理</li>
+                    <li>大数据展示</li>
+                </ul>
+            </div>
+            <div class="right">
+                <span>欢迎你：布隆</span>
+                <span>2018-02-09</span>
+            </div>
+        </div>
+
+
+        <!-- 内容区域 -->
+        <div class="tab_content">
+            <!-- 首页内容 -->
+            <div class="home_page show tab1">
+                <div class="sy_top">
+                    <div class="sy_left">
+                        <div id="demo3" class="slideBox" style="width: 440px; height: 270px;">
+                            <ul class="items">
+                                <li style="width: 440px; height: 270px;">
+                                    <a href="http://www.jq22.com/" title="这里是测试标题一"><img src="./lib/slider-141121152815/img/1.jpg"></a>
+                                </li>
+                                <li style="width: 440px; height: 270px;">
+                                    <a href="http://www.jq22.com/" title="这里是测试标题二"><img src="./lib/slider-141121152815/img/5.jpg"></a>
+                                </li>
+                                <li style="width: 440px; height: 270px;">
+                                    <a href="http://www.jq22.com/" title="这里是测试标题三"><img src="./lib/slider-141121152815/img/2.jpg"></a>
+                                </li>
+                                <li style="width: 440px; height: 270px;">
+                                    <a href="http://www.jq22.com/" title="这里是测试标题四"><img src="./lib/slider-141121152815/img/3.jpg"></a>
+                                </li>
+                                <li style="width: 440px; height: 270px;">
+                                    <a href="http://www.jq22.com/" title="这里是测试标题五"><img src="./lib/slider-141121152815/img/4.jpg"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sy_right">
+                        <div class="right_top">
+                            <div class="right_top_left">
+                                <div class="tab_li">要闻通知</div>
+                                <span>|</span>
+                                <div class="tab_li click_li">通知</div>
+                                <span>|</span>
+                                <div class="tab_li">通报</div>
+                            </div>
+                            <div class="right_top_right">
+                                moie
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 业务办理内容模块 -->
+            <div class="conten tab1">
+                <div class="left">
+                    <div class="l_top">
+                        <div class="info">
+                            <div class="tx_info">
+                                <img src="./fuweidongImg/tx_s.jpg" alt="">
+                                <div>
+                                    <p>克隆</p>
+                                    <span>信息化处理/副处长</span>
+                                </div>
+                            </div>
+                            <div class="icon">
+                                <img src="./fuweidongImg/txl.png" alt="">
+                                <img src="./fuweidongImg/txl.png" alt="">
+                                <img src="./fuweidongImg/txl.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="l_conten">
+                        <div class="title">
+                            <div>
+                                <img src="./fuweidongImg/rl.png" alt="">
+                                <span>常用服务</span>
+                            </div>
+                            <div>
+                                <img src="./fuweidongImg/add1.png" alt="">
+                            </div>
+                        </div>
+                        <div class="date">
+                            <div id="calendar"></div>
+                        </div>
+                    </div>
+                    <div class="l_bottom">
+                        <div class="title">
+                            <div>
+                                <img src="./fuweidongImg/rl.png" alt="">
+                                <span>日历安排</span>
+                            </div>
+                            <div class="remove_li">
+                                <img src="./fuweidongImg/add1.png" alt="">
+                            </div>
+                        </div>
+                        <div class="list">
+                            <ul>
+                                <li>
+                                    <img src="./fuweidongImg/txl.png" alt="">
+                                    <div>发稿拟文</div>
+                                </li>
+                                <li>
+                                    <img src="./fuweidongImg/txl.png" alt="">
+                                    <div>发稿拟文</div>
+                                </li>
+                                <li>
+                                    <img src="./fuweidongImg/txl.png" alt="">
+                                    <div>发稿拟文</div>
+                                </li>
+                                <li>
+                                    <img src="./fuweidongImg/txl.png" alt="">
+                                    <div>发稿拟文</div>
+                                </li>
+                                <li>
+                                    <img src="./fuweidongImg/txl.png" alt="">
+                                    <div>发稿拟文</div>
+                                </li>
+                                <li>
+                                    <img src="./fuweidongImg/txl.png" alt="">
+                                    <div>发稿拟文</div>
+                                </li>
+                                <li>
+                                    <img src="./fuweidongImg/txl.png" alt="">
+                                    <div>发稿拟文</div>
+                                </li>
+                                <li class="last">
+                                    <img src="./fuweidongImg/txl.png" alt="">
+                                    <div>发稿拟文</div>
+                                </li>
+                                <li id="add_list">
+                                    <img src="./fuweidongImg/add1.png" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="list" id="add_list1">
+                        <ul>
+                            <li>
+                                <img src="./fuweidongImg/txl.png" alt="">
+                                <div>发稿拟文</div>
+                            </li>
+                            <li>
+                                <img src="./fuweidongImg/txl.png" alt="">
+                                <div>发稿拟文</div>
+                            </li>
+                            <li>
+                                <img src="./fuweidongImg/txl.png" alt="">
+                                <div>发稿拟文</div>
+                            </li>
+                            <li>
+                                <img src="./fuweidongImg/txl.png" alt="">
+                                <div>发稿拟文</div>
+                            </li>
+                            <li>
+                                <img src="./fuweidongImg/txl.png" alt="">
+                                <div>发稿拟文jjsj </div>
+                            </li>
+                            <li>
+                                <img src="./fuweidongImg/txl.png" alt="">
+                                <div>发稿拟文</div>
+                            </li>
+                            <li>
+                                <img src="./fuweidongImg/txl.png" alt="">
+                                <div>发稿拟文hjsjhs </div>
+                            </li>
+                            <li>
+                                <img src="./fuweidongImg/txl.png" alt="">
+                                <div>发稿拟文</div>
+                            </li>
+                            <li>
+                                <img src="./fuweidongImg/txl.png" alt="">
+                                <div>发稿拟文</div>
+                            </li>
+                            <li>
+                                <img src="./fuweidongImg/txl.png" alt="">
+                                <div>发稿拟文</div>
+                            </li>
+                            <li>
+                                <img src="./fuweidongImg/txl.png" alt="">
+                                <div>发稿拟文</div>
+                            </li>
+                            <li>
+                                <img src="./fuweidongImg/txl.png" alt="">
+                                <div>发稿拟文</div>
+                            </li>
+                            <li>
+                                <img src="./fuweidongImg/txl.png" alt="">
+                                <div>发稿拟文</div>
+                            </li>
+                            <li>
+                                <img src="./fuweidongImg/txl.png" alt="">
+                                <div>发稿拟文</div>
+                            </li>
+                            <li>
+                                <img src="./fuweidongImg/txl.png" alt="">
+                                <div>发稿拟文</div>
+                            </li>
+                            <li>
+                                <img src="./fuweidongImg/txl.png" alt="">
+                                <div>发稿拟文</div>
+                            </li>
+                            <li>
+                                <img src="./fuweidongImg/txl.png" alt="">
+                                <div>发稿拟文</div>
+                            </li>
+                            <li>
+                                <img src="./fuweidongImg/txl.png" alt="">
+                                <div>发稿拟文</div>
+                            </li>
+                        </ul>
+                        <div class="btn">
+                            <button class="add_btn">确认</button>
+                            <button>返回</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- 大数据展示 -->
+            <div class="data_show tab1">大数据展示</div>
+        </div>
+
+    </div>
+</body>
+<script>
+    $(function() {
+        $("#calendar").ionCalendar({
+            lang: 'zh-cn'
+        });
+        $("#add_list").click(function() {
+            $("#add_list1").css("display", "block");
+        });
+
+        $("#add_list1").find("li").click(function() {
+            $(this).toggleClass("abc");
+        });
+        $(".add_btn").click(function() {
+            var elment = $(".abc");
+            var img = elment.children("img")[0].src;
+            var div = elment.children("div").text();
+            var str = ' <li>' +
+                '<img src="' + img + '" alt="">' +
+                '<div>' + div + '</div>' +
+                '</li>';
+            $("#add_list").before(str);
+            $("#add_list1").find("li").removeClass("abc");
+
+
+
+        });
+        /* tab切换 */
+        $('.main .tb_list .left ul li').click(function() {
+            var i = $(this).index(); //下标第一种写法
+            $(this).addClass('tab').siblings().removeClass('tab');
+            $('.tab_content .tab1').eq(i).show().siblings().hide();
+        });
+
+        /* 轮播图插件的使用 */
+        $('#demo3').slideBox({
+
+            duration: 0.3, //滚动持续时间，单位：秒
+
+            easing: 'linear', //swing,linear//滚动特效
+
+            delay: 5, //滚动延迟时间，单位：秒
+
+            hideClickBar: false, //不自动隐藏点选按键
+
+            clickBarRadius: 10,
+
+        });
+
+
+
+    });
+</script>
+
+</htm>

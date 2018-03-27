@@ -1,0 +1,678 @@
+/* 网上预约的头部 */
+
+.Clocation {
+    height: 100%;
+}
+
+
+/* 网上预约的位置 */
+
+.Clocation .Clocation_content {
+    margin: 0 auto;
+    /* height: 100px; */
+    /* position: relative; */
+    /* top: 0;
+    left: 0; */
+    border-bottom: 3px solid #458cde;
+    width: 300px;
+    margin: 0 auto;
+}
+
+
+/* 网上预约的头部文字效果 */
+
+.Clocation .Clocation_content .top {
+    /* position: absolute;
+    left: 40%; */
+    /* margin-left: -50%; */
+    text-align: center;
+    margin: 0px;
+    padding-bottom: 5px;
+    padding-top: 10px;
+}
+
+.Clocation .Clocation_content .top img {
+    vertical-align: bottom;
+}
+
+.Clocation .Clocation_content .top span {
+    font-family: 微软雅黑;
+    font-size: 28px;
+    color: #458cde;
+}
+
+
+/* tab切换的导航栏样式 */
+
+#main {
+    width: 1190px;
+    background: #fff;
+    border-top: 1px solid #97bae3;
+    padding-bottom: 20px;
+}
+
+
+/* 代替margin-top：10px */
+
+.mg_top10 {
+    margin-top: 10px;
+}
+
+
+/* 内容的公共样式 */
+
+.blsit_content {
+    width: 1162px;
+    margin: 0 auto;
+    border: 1px solid #d3d2d2;
+}
+
+
+/* 内容头部的公共样式 */
+
+.blsit_content .title {
+    width: 1162px;
+    height: 48px;
+    background: #F5F7F8;
+    line-height: 48px;
+    /* border-bottom: 1px solid #d3d2d2; */
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+
+/*  内容头部文字的公共样式*/
+
+.blsit_content .title span {
+    margin-left: 30px;
+    line-height: 46px;
+    /* font-family: MicrosoftYaHei-Bold; */
+    font-size: 18px;
+    color: #313131;
+    font-weight: bold;
+}
+
+
+/* tab切换的表格样式 */
+
+
+/* 内容表格的公共样式 */
+
+.blsit_content table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+/* 必填标志的公共样式 */
+
+.mustFlag {
+    color: #FF0000;
+}
+
+
+/* 下拉列表的公共样式样式 */
+
+.selectStyle {
+    /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
+    width: 255px;
+    height: 35px;
+    /* border: solid 1px #000; */
+    /*很关键：将默认的select选择框样式清除*/
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /*在选择框的最右侧中间显示小箭头图片*/
+    background: url("../images/arrow.png") no-repeat scroll right center transparent;
+    /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+    /* padding-right: 14px; */
+    line-height: 35px;
+}
+
+
+/*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+
+select::-ms-expand {
+    display: none;
+}
+
+
+/* 文字居右的公共样式 */
+
+.text_right {
+    text-align: right;
+}
+
+
+/* input框宽415px 高37px的公共样式 */
+
+.w415_h37 {
+    width: 415px;
+    height: 37px;
+    border: 1px solid #CECCCD;
+    border-radius: 5px;
+    font-size: 14px;
+    padding-left: 5px;
+    line-height: 30px;
+}
+
+.w250_h37 {
+    width: 230px;
+    height: 37px;
+    border: 1px solid #CECCCD;
+    border-radius: 5px;
+    font-size: 14px;
+    padding-left: 5px;
+    line-height: 30px;
+}
+
+table tr .NRDate {
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+table tr .NRDate .kuang {
+    position: absolute;
+    top: 38px;
+    right: 34px;
+}
+
+
+/* td需要的宽度  */
+
+.td_wh {
+    width: 205px;
+}
+
+
+/* 股权出质列表的私有样式 */
+
+.blsit_content .cz_list {
+    /* width: 100%; */
+    border-top: 1px solid #CECCCD;
+    /* height: 50px; */
+}
+
+
+/* 时间预约td的高度 */
+
+.blsit_content .cz_list tbody.tb_body tr td {
+    height: 100px;
+}
+
+
+/* 预约时间段人数统计的行高 */
+
+.blsit_content .cz_list tbody.date_body tr td {
+    height: 50px;
+    text-align: center;
+}
+
+
+/* 预约时间段人数统计上午的样式 */
+
+.blsit_content .cz_list tbody.date_body tr td.top_date {
+    text-align: center;
+    /* background: #528EE2; */
+    /* color: #fff; */
+    font-size: 18px;
+    border-bottom: 1px solid #cccccc;
+    font-weight: 900;
+}
+
+
+/* 预约时间段人数统计下午的样式 */
+
+.blsit_content .cz_list tbody.date_body tr td.bottom_date {
+    text-align: center;
+    font-weight: 900;
+    /* background: #528EE2; */
+    /* color: #fff; */
+    font-size: 18px;
+    border-bottom: 1px solid #cccccc;
+    border-top: 1px solid #cccccc;
+}
+
+
+/* 出质人头部的背景色 */
+
+.blsit_content .cz_title {
+    background: #F6F9FF;
+}
+
+
+/* 股权出质的按钮新增按钮的样式 */
+
+#myyuyue_list {
+    float: right;
+}
+
+
+/* 我的预约的按钮 */
+
+#myyuyue_list button {
+    margin-right: 14px;
+    cursor: pointer;
+    width: 90px;
+    height: 32px;
+    border: none;
+    background: #528EE2;
+    color: #fff;
+    font-family: 微软雅黑;
+    font-size: 15px;
+    margin-top: 8px;
+    line-height: 32px;
+    border-radius: 5px;
+}
+
+
+/* 我的预约按钮上面的小球的div */
+
+#myyuyue_list .qiu {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+/* 我的预约小球的图片 */
+
+#myyuyue_list .qiu img {
+    position: absolute;
+    top: 1px;
+    right: 6px;
+    width: 20px;
+    height: 20px;
+}
+
+
+/* 我的预约小球的文字 */
+
+#myyuyue_list .qiu span {
+    position: absolute;
+    top: -11px;
+    right: 12px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+
+/* 预约规则的文字样式 */
+
+.guize {
+    color: red;
+}
+
+
+/* 时间段的文字样式 */
+
+.yuyue_time {
+    font-weight: bold;
+    color: #13A0EF;
+    font-size: 16px;
+}
+
+
+/*  */
+
+.border_top {
+    border-top: 1px solid #cccccc
+}
+
+.border_td {
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+}
+
+
+/* 立即预约的按钮 */
+
+.time_btn {
+    border: none;
+    background: #3CA2F2;
+    margin-top: 5px;
+    color: #fff;
+    width: 100px;
+    height: 25px;
+    border-radius: 5px;
+    font-family: 微软雅黑;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+
+/* 我的预约 */
+
+.cz_list .my_yuyue thead tr {
+    border: none;
+}
+
+.cz_list .my_yuyue thead tr th {
+    border: none;
+    width: 25%;
+    height: 35px;
+    line-height: 35px;
+}
+
+
+/* 我的预约的样式 */
+
+.cz_list .my_yuyue tbody tr td {
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    border-top: 1px solid #cccccc;
+}
+
+.cz_list .my_yuyue tbody tr td button {
+    width: 90px;
+    border: none;
+    height: 30px;
+    line-height: 25px;
+    color: #fff;
+    font-size: 14px;
+    font-family: 微软雅黑;
+    border-radius: 5px;
+    background: #3CA2F2;
+}
+
+
+/* 取消按钮的样式 */
+
+.cz_list .my_yuyue tbody tr td button.qx_btn {
+    background: #30C9AE;
+}
+
+
+/* --------------------------------------------------------------------------- */
+
+
+/* 遮罩层 */
+
+.cover {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: none;
+}
+
+
+/* 包满整个body的阴影透明背景 */
+
+.cover .zzc {
+    width: 100%;
+    height: 100%;
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+    -moz-opacity: 0.7;
+    -khtml-opacity: 0.7;
+    background-color: black;
+    z-index: 1001;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+
+/* 弹出框 */
+
+
+/* 弹出框内容 */
+
+.myReserve_list {
+    border-radius: 15px;
+    width: 800px;
+    /* height: 600px; */
+    background: #ffffff;
+    opacity: 1;
+    /* z-index: 1100; */
+    user-select: none;
+    position: absolute;
+    top: 209px;
+    left: 50%;
+    margin-left: -400px;
+    display: none;
+}
+
+
+/* 我的预约列表的单独宽度 */
+
+#myyuyue {
+    padding-right: 30px;
+}
+
+
+/* 弹出框的头部 */
+
+.cover .myReserve_list .title2 {
+    width: 800px;
+    height: 55px;
+    background: #297ACC;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+
+/* 为了让我的预约的头部的宽度和外部框的快读保持一致 */
+
+.cover #myyuyue .title2 {
+    width: 830px;
+}
+
+
+/* 弹出框的头部的文字样式 */
+
+.cover .myReserve_list .title2 span {
+    font-weight: bold;
+    cursor: default;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 55px;
+    padding-left: 15px;
+}
+
+
+/* 弹出框的内容部分 */
+
+.cover .myReserve_list .conten2 {
+    margin-top: 55px;
+}
+
+
+/* 弹出框的内容表格部分 */
+
+.cover .myReserve_list .conten2 table {
+    width: 100%;
+}
+
+
+/*  弹出框的内容表格每行的行高 */
+
+.cover .myReserve_list .conten2 table tr {
+    line-height: 60px;
+}
+
+.cover .myReserve_list .conten2 .yuyue {
+    margin-bottom: 50px;
+}
+
+
+/* 预约列表的内容 */
+
+.cover .myReserve_list .conten2 table .yuyue_tbody td {
+    text-align: center;
+}
+
+
+/* 预约列表的按钮 */
+
+.cover .myReserve_list .conten2 table .yuyue_tbody td button {
+    width: 90px;
+    height: 25px;
+    border: none;
+    border-radius: 5px;
+    background: #3CA2F2;
+    color: #fff;
+    font-family: 微软雅黑;
+    line-height: 25px;
+}
+
+.cover .myReserve_list .conten2 table .yuyue_tbody td button.qx {
+    background: #30C9AE;
+}
+
+
+/* 弹出框的内容表格每行的宽度 */
+
+.cover .myReserve_list .conten2 table thead th {
+    width: 25%;
+}
+
+
+/* 保存按钮 */
+
+.cover .myReserve_list .conten2 .btn {
+    width: 100%;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    text-align: center;
+}
+
+
+/* 弹出框按钮的具体样式 */
+
+.cover .myReserve_list .conten2 .btn button {
+    text-align: center;
+    cursor: pointer;
+    width: 101px;
+    background-color: #458CDE;
+    font-size: 18px;
+    color: #ffffff;
+    border: none;
+    font-family: 微软雅黑;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 25px;
+    border-radius: 5px;
+}
+
+
+/* 里面的信息 */
+
+.cover .myReserve_list .conten2 .blsit_content {
+    width: 750px;
+    margin: 0 auto;
+    border: 1px solid #d3d2d2;
+}
+
+.cover .myReserve_list .conten2 .blsit_content .cz_list {
+    width: 100%;
+    border-top: 1px solid #CECCCD;
+    /* height: 50px; */
+}
+
+.cover .myReserve_list .conten2 .blsit_content .cz_title {
+    background: #F6F9FF;
+}
+
+.cover .myReserve_list .conten2 .blsit_content .cz_person {
+    width: 100%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.cover .myReserve_list .conten2 .blsit_content .cz_person .divShu {
+    display: inline-block;
+    width: 2px;
+    height: 14px;
+    background: #458cde;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.cover .myReserve_list .conten2 .blsit_content .cz_person .peopleName {
+    margin-left: 40px;
+    margin-top: 6px;
+    position: absolute;
+    font-family: MicrosoftYaHei;
+    font-weight: bold;
+    font-size: 16px;
+    color: #313131;
+}
+
+.cover .myReserve_list .conten2 .blsit_content {
+    width: 750px;
+    margin: 0 auto;
+    border: 1px solid #d3d2d2;
+}
+
+
+/* 申批事项头部的样式 */
+
+.cover .myReserve_list .conten2 .blsit_content .title {
+    width: 750px;
+    height: 48px;
+    background: #F5F7F8;
+    line-height: 48px;
+    /* border-bottom: 1px solid #d3d2d2; */
+}
+
+
+/*  申请事项头部文字的样式*/
+
+.cover .myReserve_list .conten2 .blsit_content .title span {
+    margin-left: 30px;
+    line-height: 46px;
+    /* font-family: MicrosoftYaHei-Bold; */
+    font-size: 18px;
+    color: #313131;
+    font-weight: bold;
+}
+
+
+/* 审批事项叉叉的样式 */
+
+.cover .myReserve_list .title2 .tk_btn {
+    position: absolute;
+    padding: 0 20px;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    text-shadow: 0 1px 0 #FFF;
+    filter: alpha(opacity=20);
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    top: 15px;
+    right: 0px;
+    outline: none
+}
+
+
+/* 提示信息 */
+
+.tishi {
+    padding-left: 25px;
+    line-height: 50px;
+    color: red;
+    font-family: 微软雅黑;
+    font-size: 14px;
+}

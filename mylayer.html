@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+	*{padding: 0;margin: 0;}
+	.fl{float: left;}
+	.fr{float: right;}
+	.mylayer{height: 300px;width: 400px;background-color: darkgrey;border: 6px solid red;border-radius: 6px;position: absolute;}
+	.title{height: 30px;background-color: gold;font-family: ;font:24px/30px "微软雅黑";padding: 10px;}
+	.title button{height: 30px;width: 30px;}
+	.content{height: 200px;}
+	.footer{height: 30px;background-color: green;padding: 10px;}
+	.footer button{height: 30px;width: 50px;}
+</style>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+	<button onclick="openNewLayer();">打开一个新弹出层！</button>
+	<!--<div class='mylayer'>
+		<div class='title'>
+			<p class='fl'>标题1</p>
+			<button class='close fr'>X</button>
+		</div>
+		<div class='content'></div>
+		<div class='footer'>
+			<button class='fl'>确定</button>
+			<button class='fr'>取消</button>
+		</div>
+	</div>-->
+</body>
+<script>
+		var layer = "<div class='mylayer'><div class='title'><p class='fl'>标题1</p><button class='close fr'>X</button></div><div class='content'></div><div class='footer'><button class='fl'>确定</button><button class='fr'>取消</button></div></div>";
+		var top2 = 100;
+		var left = 400;
+		function openNewLayer(){
+			top2+=20;
+			left+=20;
+			var newlayer = $(layer);
+			newlayer.css({"top":top2+"px","left":left+"px"});
+			$("body").append(newlayer);	
+		}
+		
+		var zindex=0;
+		$("body").on("mousedown",".mylayer",function(){
+			zindex++;
+			console.log(zindex);
+			$(this).css("z-index",zindex);
+		});
+		
+		$("body").on("click",".close",function(){
+			$(this).parent().parent().remove();
+		});
+		
+		$("body").on("mousedown",".title",function(event){
+			var box=$(this).parent();
+			var pagex=event.clientX;
+			var pagey=event.clientY;
+			//点击时鼠标距离弹出框边框的位置
+			var x=pagex-box.offset().left;
+			var y=pagey-box.offset().top;
+			document.onmousemove=function(event){
+				var xx=event.clientX;
+				var yy=event.clientY;
+				xx=xx-x;
+				yy=yy-y;
+				box.css("left",xx+"px");
+				box.css("top",yy+"px");
+			}	
+		});
+
+		$("body").on("mouseup",".title",function(event){
+			document.onmousemove=null;
+		});
+</script>
+</html>

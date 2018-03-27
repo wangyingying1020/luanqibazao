@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var obj = {
+            "wangying": 1,
+            "zhangpan": 2,
+            "keai": 3
+        }
+        var arr = [];
+        for (var time in obj) {
+            var obj1 = {};
+            obj1.name = time;
+            obj1.age = obj[time];
+            arr.push(obj1);
+        }
+        console.dir(arr)
+    </script>
+</body>
+
+</html>

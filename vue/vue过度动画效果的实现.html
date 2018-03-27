@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+    <style>
+        .v-enter-active,
+        .v-leave-active {
+            transition: all 1s ease;
+        }
+        
+        .v-enter,
+        .v-leave-to
+        /* .fade-leave-active below version 2.1.8 */
+        
+        {
+            transform: translateX(30px);
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <button @click="is=!is">点击实现组件得过渡效果</button>
+        <transition>
+            <data-abc v-if="is"></data-abc>
+        </transition>
+    </div>
+    <script>
+        //
+        Vue.component("data-abc", {
+            template: "<div>我是一个组件</div>"
+        })
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                is: true,
+            }
+        })
+    </script>
+</body>
+
+</html>

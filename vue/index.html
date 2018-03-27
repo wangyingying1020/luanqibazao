@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+    <style>
+        .enter-active,
+        .leave-active {
+            transition: opacity .5s;
+        }
+        
+        .enter,
+        .leave-to
+        /* .fade-leave-active below version 2.1.8 */
+        
+        {
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <p>{{message}}</p>
+        <span :title="message">鼠标悬浮看如何</span>
+        <p v-if="seen">你可以看见我了</p>
+        <div v-for="todo in todos">
+            <!-- <p>{{todo.name}}{{todo.age}}</p> -->
+            <hr>
+            <chuanzhi :time="todo"></chuanzhi>
+        </div>
+        <button v-on:click="add">改变消息</button>
+        <br>
+        <br>
+        <br>
+        <input type="text" v-model="message" />
+        <transition>
+            <zhujian></zhujian>
+        </transition>
+
+        <zhujian></zhujian>
+        <zhujian></zhujian>
+        <hh v-for="todo in todos" :haha="todo" :key="todo.age"></hh>
+    </div>
+    <script>
+        Vue.component("zhujian", {
+            template: "<div>哈哈哈哈我是组件</div>"
+        });
+        Vue.component("hh", {
+            props: ["haha"],
+            template: "<p>{{haha.name}}</p>"
+        });
+        // 实现父组件想子组件传值用的方式
+        Vue.component("chuanzhi", {
+            props: ["time"],
+            data: function() {
+                return {
+                    conts: this.time
+                }
+            },
+            template: '<div>{{conts.name}}</div>'
+        })
+        var app = new Vue({
+            el: "#app",
+            data: {
+                message: "世界你好",
+                seen: true,
+                todos: [{
+                    name: "张三",
+                    age: 18
+                }, {
+                    name: "李四",
+                    age: 22
+                }]
+            },
+            methods: {
+                add: function() {
+                    if (this.seen) {
+                        this.seen = false;
+                    } else {
+                        this.seen = true;
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

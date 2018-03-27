@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+    <style>
+        ul {
+            list-style: none;
+            display: flex;
+        }
+        
+        li {
+            margin: 0px 20px;
+            background: red;
+        }
+        
+        .abc {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <ul>
+            <li @click="tabClick1($event)" v-bind:class="{abc:index1}">tab1</li>
+            <li @click="tabClick2()" v-bind:class="{abc:index2}">tab2</li>
+            <li @click="tabClick3()" v-bind:class="{abc:index3}">tab3</li>
+        </ul>
+        <div>
+            <conten1 v-show="index1"></conten1>
+            <conten2 v-show="index2"></conten2>
+            <conten3 v-show="index3"></conten3>
+        </div>
+    </div>
+</body>
+<script>
+    var tab11 = {
+        template: "<div>内容1</div>"
+    }
+    var tab22 = {
+        template: "<div>内容2</div>"
+    }
+    var tab33 = {
+        template: "<div>内容3</div>"
+    }
+    var app = new Vue({
+        el: "#app",
+        data: {
+            index1: true,
+            index2: false,
+            index3: false,
+            style: "abc",
+        },
+        methods: {
+            tabClick1: function(e) {
+                this.index1 = true;
+                this.index2 = false;
+                this.index3 = false;
+            },
+            tabClick2: function() {
+                this.index1 = false;
+                this.index2 = true;
+                this.index3 = false;
+            },
+            tabClick3: function() {
+                this.index1 = false;
+                this.index2 = false;
+                this.index3 = true;
+            }
+        },
+        components: {
+            "conten1": tab11,
+            "conten2": tab22,
+            "conten3": tab33
+        }
+    })
+</script>
+
+</html>

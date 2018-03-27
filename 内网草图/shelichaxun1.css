@@ -1,0 +1,340 @@
+/* 公共样式 */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft Yahei";
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+
+/* 内容样式 */
+
+.main {
+    width: 100%;
+}
+
+.main .top_title {
+    width: 100%;
+    height: 82px;
+    background: #154F99;
+}
+
+
+/* 身体内容 */
+
+.main .body_content {
+    width: 100%;
+    height: 900px;
+}
+
+
+/* 身体内容左侧 */
+
+.main .body_content .left {
+    width: 12%;
+    height: 900px;
+    background: #F7F7F7;
+    float: left;
+}
+
+
+/* 身体右侧部分 */
+
+
+/* 打开页面脑导航 */
+
+.main .body_content .right {
+    width: 88%;
+    height: 100%;
+    float: right;
+}
+
+.main .body_content .right .top_nav {
+    width: 100%;
+    height: 27px;
+    background: #E7E7E7;
+}
+
+
+/* 内容tab切换区域 */
+
+.main .body_content .right .tab_content {
+    width: 100%;
+}
+
+.main .body_content .right .tab_content .tab_content_ul {
+    display: block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background: #DAE6F7;
+    font-weight: 700;
+}
+
+.main .body_content .right .tab_content .tab_content_ul li {
+    float: left;
+    width: 33.33%;
+    text-align: center;
+}
+
+.main .body_content .right .tab_content .tab_content_ul li:nth-child(1) {
+    background: #EFF5FD;
+}
+
+
+/* tab切换内容区域 */
+
+.main .body_content .right .tab_content .tab_content_nr {
+    width: 100%;
+    height: 860px;
+    /* background: red; */
+    box-sizing: border-box;
+    padding: 10px;
+    padding-top: 20px;
+}
+
+
+/* 查询条件 */
+
+.main .body_content .right .tab_content .tab_content_nr .inquire_condition {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #cccccc;
+    margin-bottom: 20px;
+}
+
+.main .body_content .right .tab_content .tab_content_nr .inquire_condition .title {
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    background: #DFE8F3;
+}
+
+.main .body_content .right .tab_content .tab_content_nr .inquire_condition .title span {
+    font-size: 16px;
+    margin-left: 10px;
+    font-weight: 700;
+}
+
+.main .body_content .right .tab_content .tab_content_nr .inquire_condition .condition_select {
+    width: 100%;
+    height: 50px;
+    line-height: 20px;
+}
+
+.main .body_content .right .tab_content .tab_content_nr .inquire_condition .condition_select div {
+    float: left;
+    margin-left: 100px;
+    padding-top: 20px;
+    font-size: 15px;
+}
+
+.main .body_content .right .tab_content .tab_content_nr .inquire_condition .condition_select div label {
+    margin-left: 10px;
+}
+
+.main .body_content .right .tab_content .tab_content_nr .inquire_condition .condition_select div:nth-child(2) {
+    margin-left: 100px;
+}
+
+.main .body_content .right .tab_content .tab_content_nr .inquire_condition .import {
+    width: 100%;
+}
+
+.main .body_content .right .tab_content .tab_content_nr .inquire_condition .import div.inpt {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100px;
+}
+
+.main .body_content .right .tab_content .tab_content_nr .inquire_condition .import div.inpt span {
+    position: absolute;
+    top: 40px;
+    left: 180px;
+}
+
+.main .body_content .right .tab_content .tab_content_nr .inquire_condition .import div.inpt span i {
+    color: red;
+}
+
+.main .body_content .right .tab_content .tab_content_nr .inquire_condition .import div.inpt input {
+    position: absolute;
+    top: 32px;
+    right: 132px;
+    width: 500px;
+    height: 35px;
+    line-height: 38px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    behavior: url(./yuan/PIE.htc);
+}
+
+.main .body_content .right .tab_content .tab_content_nr .inquire_condition .import div.btn {
+    width: 100%;
+    text-align: center;
+    height: 100px;
+    line-height: 80px;
+}
+
+.main .body_content .right .tab_content .tab_content_nr .inquire_condition .import div.btn button {
+    width: 100px;
+    height: 35px;
+    line-height: 35px;
+    border: none;
+    background: #3B8AC7;
+    color: #ffffff;
+    border-radius: 10px;
+    font-size: 16px;
+    behavior: url(./yuan/PIE.htc);
+}
+
+
+/* 企业待录入列表 */
+
+.main .body_content .right .tab_content .tab_content_nr .firm_list {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #cccccc;
+    /* padding-bottom: 93px; */
+}
+
+.main .body_content .right .tab_content .tab_content_nr .firm_list .title {
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    background: #DFE8F3;
+}
+
+.main .body_content .right .tab_content .tab_content_nr .firm_list .title span {
+    font-size: 16px;
+    margin-left: 10px;
+    font-weight: 700;
+}
+
+.main .body_content .right .tab_content .tab_content_nr .firm_list .firm_list_content {
+    width: 100%;
+}
+
+.main .body_content .right .tab_content .tab_content_nr .firm_list .firm_list_content ul {
+    display: block;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.main .body_content .right .tab_content .tab_content_nr .firm_list .firm_list_content ul li {
+    display: block;
+    width: 100%;
+    /*  height: 50px;
+    line-height: 50px; */
+    position: relative;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid #cccccc;
+    height: 60px;
+}
+
+.main .body_content .right .tab_content .tab_content_nr .firm_list .firm_list_content ul li .list_left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 15px;
+}
+
+.main .body_content .right .tab_content .tab_content_nr .firm_list .firm_list_content ul li .list_left_top {
+    height: 35px;
+    line-height: 35px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.main .body_content .right .tab_content .tab_content_nr .firm_list .firm_list_content ul li .list_left_top .icon {
+    height: 20px;
+    background: #96CC51;
+    display: inline-block;
+    border-radius: 8px;
+    behavior: url(./yuan/PIE.htc);
+    position: relative;
+    top: 0px;
+    left: 0;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.main .body_content .right .tab_content .tab_content_nr .firm_list .firm_list_content ul li .list_left_top span {
+    line-height: 40px;
+    display: inline-block;
+}
+
+.main .body_content .right .tab_content .tab_content_nr .firm_list .firm_list_content ul li .list_left_top img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.main .body_content .right .tab_content .tab_content_nr .firm_list .firm_list_content ul li .list_left .list_left_bottom {
+    margin-left: 33px;
+}
+
+.main .body_content .right .tab_content .tab_content_nr .firm_list .firm_list_content ul li .list_left .list_left_bottom div {
+    float: left;
+    margin-left: 70px;
+}
+
+.main .body_content .right .tab_content .tab_content_nr .firm_list .firm_list_content ul li .list_left .list_left_bottom div span {
+    font-size: 14px;
+    color: #666666;
+}
+
+.main .body_content .right .tab_content .tab_content_nr .firm_list .firm_list_content ul li .list_left .list_left_bottom div:nth-child(1) {
+    margin-left: 0px;
+}
+
+.main .body_content .right .tab_content .tab_content_nr .firm_list .firm_list_content ul li .list_right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 50px;
+    line-height: 50px;
+}
+
+.main .body_content .right .tab_content .tab_content_nr .firm_list .firm_list_content ul li .list_right div {
+    font-size: 14px;
+    color: #666666;
+    float: left;
+    margin-right: 25px;
+}
+
+.main .body_content .right .tab_content .tab_content_nr .firm_list .firm_list_content ul li .list_right div img {
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+}
+
+
+/* 分页插件的样式 */
+
+.main .body_content .right .tab_content .tab_content_nr .firm_list .page {
+    width: 100%;
+    height: 93px;
+    position: relative;
+    top: 0;
+    left: 0;
+    /*  margin-top: 50%;
+    margin-left: 50%; */
+}

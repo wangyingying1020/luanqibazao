@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./lib/jquery-1.7.1.min.js"></script>
+    <style>
+        img {
+            width: 300px;
+        }
+        
+        html,
+        body {
+            height: 100%;
+            /* overflow: hidden; */
+        }
+    </style>
+</head>
+
+<body>
+    <img src="./轮播图插件/jQuery-lbt478520161225/jQuery-lbt/images/1.png" alt="haha" id="im_btn">
+    <button>点击</button>
+    <br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+<script>
+    $(function() {
+
+
+        var hha = 1;
+        $("#im_btn").click(function() {
+            if (hha == 1) {
+                $("body").on("touchmove", function(e) {
+                    e.preventDefault();
+                });
+                $(this).width(100);
+                hha = 0;
+            } else {
+                $("body").off("touchmove");
+                $(this).width(300);
+                hha = 1;
+            }
+        })
+    });
+</script>
+
+</html>

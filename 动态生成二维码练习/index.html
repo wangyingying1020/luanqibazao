@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../lib/jquery-1.7.1.min.js"></script>
+    <script src="./qrcode.js"></script>
+    <style>
+        #dv {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <button>点击生成二维码</button>
+    <div id="dv"></div>
+</body>
+<script>
+    $(function() {
+        $("button").click(function() {
+            var qrcode = new QRCode(document.getElementById("dv"), {
+                width: 100,
+                height: 100
+            });
+
+            qrcode.makeCode("hahaahhahakhhfdsdkfksdhfksdfjksdhfksdjhdjk");
+        })
+    })
+</script>
+
+</html>

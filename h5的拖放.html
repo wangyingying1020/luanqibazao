@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <script src="./lib/jquery-1.7.1.min.js"></script>
+    <style type="text/css">
+        #div1 {
+            float: left;
+            width: 100px;
+            height: 35px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #aaaaaa;
+        }
+        
+        #div2 {
+            float: left;
+            width: 200px;
+            height: 135px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #aaaaaa;
+        }
+    </style>
+    <script type="text/javascript">
+        // function allowDrop(ev) {
+        //     ev.preventDefault();
+        // }
+
+        // var srcdiv = 123;
+
+        // function drag(ev, divdom) {
+        //     srcdiv = divdom;
+        //     ev.dataTransfer.setData("text/html", divdom.innerHTML);
+        // }
+
+        // function drop(ev, divdom) {
+        //     ev.preventDefault();
+        //     if (srcdiv != divdom) {
+        //         srcdiv.innerHTML = divdom.innerHTML;
+        //         divdom.innerHTML = ev.dataTransfer.getData("text/html");
+        //     }
+        // }
+    </script>
+</head>
+
+<body>
+
+    <div class="div1" id="div1" draggable="true">
+        <p>ni hao!
+
+        </p>
+        <img src="./轮播图插件/jQuery-lbt478520161225/jQuery-lbt/images/1.png" alt="">
+    </div>
+    <div class="div1" id="div2" draggable="true">
+        <p>Hello world!
+
+        </p>
+        <img src="./轮播图插件/jQuery-lbt478520161225/jQuery-lbt/images/2.png" alt="">
+    </div>
+
+</body>
+<script>
+    var dv = document.getElementsByClassName("dongtai");
+    var srcdiv = 123;
+    for (var i = 0; i < dv.length; i++) {
+        dv[i].ondragover = function allowDrop() {
+            var event = window.event || arguments.callee.caller.arguments[0];
+            event.preventDefault();
+        };
+        dv[i].ondrop = function drop() {
+            var event = window.event || arguments.callee.caller.arguments[0];
+            var tar = event.currentTarget;
+            event.preventDefault();
+            if (srcdiv != tar) {
+                srcdiv.innerHTML = tar.innerHTML;
+                tar.innerHTML = event.dataTransfer.getData("text/html");
+            }
+        };
+
+        dv[i].ondragstart = function drag() {
+            var event = window.event || arguments.callee.caller.arguments[0];
+            var tar = event.currentTarget;
+            srcdiv = tar;
+            event.dataTransfer.setData("text/html", tar.innerHTML);
+        }
+    }
+</script>
+
+</html>

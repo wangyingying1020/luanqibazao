@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./lib/jquery-1.7.1.min.js"></script>
+    <style>
+        div {
+            float: left;
+        }
+        
+        .female {
+            margin-left: 200px;
+            margin-right: 100px;
+        }
+        
+        input[type="radio"]+label::before {
+            content: "\a0";
+            /*不换行空格*/
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 18px;
+            width: 1em;
+            height: 1em;
+            margin-right: .4em;
+            border-radius: 50%;
+            border: 1px solid #154F99;
+            text-indent: .15em;
+            line-height: 1;
+        }
+        
+        input[type="radio"]:checked+label::before {
+            background-color: #154F99;
+            background-clip: content-box;
+            padding: .2em;
+        }
+        
+        input[type="radio"] {
+            position: absolute;
+            clip: rect(0, 0, 0, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+    <!-- <div class="female">
+        <input type="radio" id="female" name="sex" checked />
+        <label for="female">通知文书编号</label>
+    </div>
+    <div class="male">
+        <input type="radio" id="male" name="sex" />
+        <label for="male">企业类型</label>
+    </div> -->
+</body>
+<script>
+    /* var btn = ; */
+
+    $(function() {
+        function abc() {
+            alert("abc");
+        };
+
+        $("#app").html(`<button onclick='{abc()}'>点击弹框</button>`);
+
+        /*  if (navigator.appName === 'Microsoft Internet Explorer') { //判断是否是IE浏览器
+             if (navigator.userAgent.match(/Trident/i) && navigator.userAgent.match(/MSIE 8.0/i)) { //判断浏览器内核是否为Trident内核IE8.0
+                 $("input:radio").css("clip", "none")
+             }
+         } */
+
+    })
+</script>
+
+</html>

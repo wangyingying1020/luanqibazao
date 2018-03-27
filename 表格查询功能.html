@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./lib/jquery-1.7.1.min.js"></script>
+    <script src="./lib/template(1).js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>编号</th>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>个性签名</th>
+            </tr>
+        </thead>
+        <tbody id="tb"></tbody>
+    </table>
+    <input type="text"> <button>点击搜索</button>
+
+</body>
+<script type="text/html" id="tabTpl">
+    {{each list as value index}}
+    <tr>
+        <td>{{value.id}}</td>
+        <td>{{value.name}}</td>
+        <td>{{value.age}}</td>
+        <td>{{value.test}}</td>
+    </tr>
+    {{/each}}
+</script>
+<script>
+    $(function() {
+        $.ajax({
+            url: "./tabel.json",
+            success: function(data) {
+                console.dir(data);
+                var html = template('tabTpl', {
+                    list: data
+                });
+                $('#tb').html(html);
+            }
+
+        });
+
+        $("button").click(function() {
+            var text = $("input").val();
+            var arr = [];
+            alert(text);
+            var tabVal = $("#tb").children("tr").children("td");
+            tabVal.each(function(index, time) {
+                if (text == $(time).text()) {
+                    $(time).parent("tr").css("background", "red")
+                }
+            })
+        });
+        $("input")
+    })
+</script>
+
+</html>

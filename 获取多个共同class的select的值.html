@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./lib/jquery-1.7.1.min.js"></script>
+</head>
+
+<body>
+    <select class="aa" id="abc">
+        <option >123</option>
+        <option >ABV</option>
+        <option >汪盈</option>
+        <option >哈哈</option>
+    </select>
+    <select class="aa" id="abc1">
+        <option >123</option>
+        <option >ABV</option>
+        <option >汪盈</option>
+        <option >哈哈</option>
+    </select>
+    <select class="aa" id="abc2">
+        <option >123</option>
+        <option >ABV</option>
+        <option >汪盈</option>
+        <option >哈哈</option>
+    </select>
+    <input type="text" class="haha" id="haha" value="jjds">
+    <br>
+    <input type="text" class="haha" id="haha1" value="晋级赛">
+    <br>
+    <input type="text" class="haha" id="haha2" value="hahha">
+
+    <button>点击</button>
+</body>
+<script>
+    $(function() {
+
+        $("button").click(function() {
+            var abc = $(".aa option:selected");
+            var haha = $(".haha");
+            var arr = [];
+            var inp_attr = [];
+            var attr2 = [];
+            abc.each(function(i, time) {
+
+                arr.push({
+                    id: $(time).parent("select").attr("id"),
+                    value: time.text
+                });
+            });
+            // console.log(arr);
+            haha.each(function(i, time) {
+                inp_attr.push({
+                    id: $(time).attr("id"),
+                    value: time.value
+                });
+            });
+            arr.map(function(time, i) {
+                attr2.push({
+                    id1: time.id,
+                    value1: time.value,
+                    id2: inp_attr[i].id,
+                    value2: inp_attr[i].value
+                })
+            });
+            var attr3 = [];
+            // console.dir(inp_attr)
+
+            console.dir(attr2);
+            for (var i = 0; i < attr2.length; i++) {
+                // alert(attr2[i].id1)
+                var id = attr2[i].id1;
+                var id2 = attr2[i].id2;
+
+                var obj = {};
+                obj[id] = attr2[i].value1;
+                obj[id2] = attr2[i].value2;
+                attr3.push(obj)
+            }
+            console.dir(attr3)
+        })
+    })
+</script>
+
+</html>

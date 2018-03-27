@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+       table.gridtable {
+        font-family: verdana,arial,sans-serif;
+        font-size:11px;
+        color:#333333;
+        border-width: 1px;
+        border-color: #666666;
+        border-collapse: collapse;
+    }
+    table.gridtable th {
+        border-width: 1px;
+        padding: 8px;
+        border-style: solid;
+        border-color: #666666;
+        background-color: #dedede;
+        width: 231px;
+    }
+    table.gridtable td {
+        border-width: 1px;
+        padding: 8px;
+        border-style: solid;
+        border-color: #666666;
+        background-color: #ffffff;
+        text-align: center;
+        border: none;
+    }
+    table.gridtable td span{
+        display: inline-block;
+        width: 50px;
+        text-align: right;
+    }
+    </style>
+</head>
+<body>
+        <table border="1" id="tb" class="gridtable">
+                <tr>
+                    <th>Heading</th>
+                </tr>
+                <tr>
+                    <td>
+                        <span>用户名：</span>
+                        <input type="text" name="name" id="name" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>密码：</span>
+                        <input type="password" name="pass" id="pass">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>密码：</span>
+                        <input type="password" name="pass" id="pass">
+                    </td>
+                </tr>
+        </table>
+</body>
+</html>

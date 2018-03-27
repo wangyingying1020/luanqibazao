@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./lib/jquery-1.7.1.min.js"></script>
+    <script src="./lib/template(1).js"></script>
+</head>
+
+<body>
+    <button id="btn">按钮</button>
+    <div id="dv"></div>
+    <script type="text/html" id="dvTpl">
+        <ul>
+            {{each list as value index}}
+            <li>{{index}} - {{value.name}}</li>
+            {{/each}}
+        </ul>
+    </script>
+</body>
+<script>
+    $(function() {
+        $("#btn").click(function() {
+            $.ajax({
+                url: "/data.json",
+                success: function(data) {
+                    // alert(data);
+                    // console.log(data);
+                    var html = template('dvTpl', {
+                        list: data
+                    });
+                    $('#dv').html(html);
+                    // var bac = JSON.parse(data);
+                    // alert(bac);
+                }
+            })
+        })
+    })
+</script>
+
+</html>

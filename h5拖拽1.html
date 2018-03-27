@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <style type="text/css">
+        #div1 {
+            float: left;
+            width: 100px;
+            height: 35px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #aaaaaa;
+        }
+        
+        #div2 {
+            float: left;
+            width: 200px;
+            height: 135px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #aaaaaa;
+        }
+        /* img {
+            width: 15px;
+            height: 20px;
+        } */
+    </style>
+    <script type="text/javascript">
+        var is = false;
+
+        function allowDrop(ev) {
+            if (is) {
+                ev.preventDefault();
+            }
+        }
+
+        var srcdiv = null;
+
+        function drag(ev, divdom) {
+            if (is) {
+                srcdiv = divdom;
+                ev.dataTransfer.setData("text/html", divdom.innerHTML);
+            }
+        }
+
+        function drop(ev, divdom) {
+            if (is) {
+                ev.preventDefault();
+                if (srcdiv != divdom) {
+                    srcdiv.innerHTML = divdom.innerHTML;
+                    divdom.innerHTML = ev.dataTransfer.getData("text/html");
+                }
+            }
+        }
+        $(".yes").click(function() {
+            is = true;
+        });
+        $(".no").click(function() {
+            is = false;
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="div1" ondrop="drop(event,this)" ondragover="allowDrop(event)" draggable="true" ondragstart="drag(event, this)">
+        <p>ni hao!</p>
+        <img src="./轮播图插件/jQuery-lbt478520161225/jQuery-lbt/images/1.png" alt="">
+    </div>
+    <div id="div2" ondrop="drop(event,this)" ondragover="allowDrop(event)" draggable="true" ondragstart="drag(event, this)">
+        <p>Hello world!</p>
+        <img src="./轮播图插件/jQuery-lbt478520161225/jQuery-lbt/images/2.png" alt="">
+    </div>
+    <button class="yes">可以拖拽</button> <button class="no">不可以</button>
+</body>
+<script>
+</script>
+
+</html>

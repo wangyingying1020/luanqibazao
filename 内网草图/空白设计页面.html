@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>设立登记查询页面草图(根据企业名称)</title>
+    <link rel="stylesheet" href="./kongbai.css">
+    <!--[if IE]>
+		<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+    <script src="./jquery-1.7.1.min.js"></script>
+    <script src="./yuan/PIE_IE678.js"></script>
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+    <div class="main">
+        <!-- 顶部 -->
+        <div class="top_title"></div>
+        <!-- 身体内容区域 -->
+        <div class="body_content">
+            <!-- 左侧 -->
+            <div class="left"></div>
+            <div class="right">
+                <div class="top_nav"></div>
+                <!-- 内容区域 -->
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $(function() {
+        //手风琴
+        (function() {
+
+            $('dd').filter(':nth-child(n+4)').addClass('hide');
+
+            $('dl').on('click', 'dt', function() {
+                $(this).next().slideToggle(200);
+            });
+
+        })();
+
+    })
+</script>
+
+</html>

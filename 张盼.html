@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./lib/jquery-1.7.1.min.js"></script>
+</head>
+
+<body>
+    <script>
+        var shuju = [{
+            wangzhan: "百度",
+            dongzuo: "点击",
+            shuliang: 20
+        }, {
+            wangzhan: "百度",
+            dongzuo: "浏览",
+            shuliang: 10
+        }, {
+            wangzhan: "百度",
+            dongzuo: "下载",
+            shuliang: 25
+        }, {
+            wangzhan: "谷歌",
+            dongzuo: "下载",
+            shuliang: 20
+        }, {
+            wangzhan: "谷歌",
+            dongzuo: "浏览",
+            shuliang: 10
+        }]
+
+        // 目标类型
+        var ABC = [{
+            id: 1,
+            wangzhan: "百度",
+            shuliang: 55,
+        }, {
+            dongzuo: "浏览",
+            shuliang: 10,
+            parent: 1
+        }, {
+            dongzuo: "下载",
+            shuliang: 25
+        }]
+
+        shuju.forEach(function(item, i) {
+
+            alert(item.wangzhan)
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./jQuery-jcDate日期输入框插件/css/jcDate.css">
+    <script src="http://www.lanrenzhijia.com/ajaxjs/1.7.2/jquery-1.7.2.min.js"></script>
+    <script src="./jQuery-jcDate日期输入框插件/js/jQuery-jcDate.js"></script>
+</head>
+<body>
+    <div id="lanrenzhijia">
+        <input class="jcDate" style="width:200px; height:20px; line-height:20px; padding:4px;" />
+    </div>
+<script>
+    $(function (){
+	$(".jcDate").jcDate({					       
+			IcoClass : "jcDateIco",
+			Event : "click",
+			Speed : 100,
+			Left : 0,
+			Top : 28,
+			format : "-",
+			Timeout : 100
+	});
+});
+    
+</script>        
+</body>
+</html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>设立登记查询页面草图(根据企业名称)</title>
+
+    <link rel="stylesheet" href="./skins/all.css">
+    <link rel="stylesheet" href="./fenye/paging.css">
+    <link rel="stylesheet" href="./shaixuan/font-awesome.min.css">
+    <link rel="stylesheet" href="./shaixuan/reset.css">
+    <link rel="stylesheet" href="./shaixuan/style.css">
+    <link rel="stylesheet" href="./shelichaxun2.css">
+    <script src="./jquery-1.7.1.min.js"></script>
+    <script src="./yuan/PIE_IE678.js"></script>
+    <script src="./icheck.js"></script>
+    <script src="./fenye/paging.js"></script>
+    <style>
+        .box .pageWrap ul .sel-page {
+            background-color: #3B8AC7;
+            color: #ffffff;
+        }
+        
+        .border {
+            border: none;
+        }
+        
+        .shaixuan-tj {
+            padding-left: 10px;
+        }
+        
+        .clearfix {
+            font-size: 16px;
+            font-family: "Microsoft Yahei";
+            font-weight: 700;
+        }
+        
+        #sxbtn {
+            font-size: 16px;
+            font-family: "Microsoft Yahei";
+            font-weight: 700;
+            margin-right: 10px;
+        }
+        
+        .box {
+            left: 35%;
+            transform: translate(-23%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <!-- 顶部 -->
+        <div class="top_title"></div>
+        <!-- 身体内容区域 -->
+        <div class="body_content">
+            <!-- 左侧 -->
+            <div class="left"></div>
+            <div class="right">
+                <div class="top_nav"></div>
+                <div class="tab_content">
+                    <ul class="tab_content_ul">
+                        <li>设立登记</li>
+                        <li>不核名设立登记</li>
+                        <li>个体简易登记</li>
+                    </ul>
+                    <div class="tab_content_nr">
+                        <!-- 查询条件录入 -->
+                        <div class="inquire_condition">
+                            <div class="title">
+                                <span>查询条件录入</span>
+                            </div>
+                            <div class="condition_select">
+                                <div>
+                                    <input tabindex="11" type="radio" id="square-radio-1" name="square-radio" class="inp">
+                                    <label for="square-radio-1">根据名称预核准通知书文号(告知书编号)查询</label>
+                                </div>
+                                <div>
+                                    <input tabindex="12" type="radio" id="square-radio-1" name="square-radio" class="inp" checked>
+                                    <label for="square-radio-2">根据企业名称查询</label>
+                                </div>
+                            </div>
+                            <!-- 输入框 -->
+                            <div class="import">
+                                <div class="inpt">
+                                    <span><i>&nbsp;&nbsp;*&nbsp;&nbsp;</i>请输入企业名称:</span>
+                                    <input type="text">
+                                </div>
+                                <div class="inpt">
+                                    <span class="from_type_name">请选择企业类型:</span>
+                                    <select class="from_type_content">
+                                        <option>请选择企业类型</option>
+                                        <option>企业--股份合同制</option>
+                                        <option>企业--股份合同制</option>
+                                        <option>企业--股份合同制</option>
+                                        <option>企业--股份合同制</option>
+                                    </select>
+                                </div>
+                                <div class="btn">
+                                    <button>查询</button>
+                                    <button>重置</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 企业待录入列表 -->
+                        <div class="firm_list">
+                            <div class="title">
+                                <span>企业待录入列表</span>
+                            </div>
+                            <div class="rongqi">
+                                <div class="condition_filtrate">
+                                    <div class="clearfix">
+                                        <p class="shaixuan-tj floatLeft clearfix">
+                                            <span><a href="/">全部结果</a></span>
+                                            <span>&gt;</span>
+                                        </p>
+                                        <p id="sxbtn" class="shaixuan-btn clearfix"><span><em>收起筛选 &gt; </em></span></p>
+                                    </div>
+                                    <div id="page-search-store" class="mb10 border sxcon">
+                                        <div class="search-by by-category relative">
+                                            <dl class="relative clearfix">
+                                                <dt class="floatLeft"><a href="/">名称状态：</a></dt>
+                                                <dd class="floatLeft show-con">
+                                                    <a href="/" class="">设立登记受理通知书已打印</a>
+                                                    <a href="/" class="">设立录入已完成</a>
+                                                    <a href="/" class="">设立录入已完成</a>
+                                                    <a href="/" class="">正在录入</a>
+                                                    <a href="/" class="nzw12">进口个人护理</a>
+                                                    <a href="/" class="">进口牛奶</a>
+                                                    <a href="/" class="">进口母婴用品</a>
+                                                    <a href="/" class="">进口零食</a>
+                                                    <a href="/" class="">进口冲调保健</a>
+                                                    <a href="/" class="">进口个人护理</a>
+                                                    <a href="/" class="">进口零食</a>
+                                                    <a href="/" class="">进口冲调保健</a>
+                                                    <a href="/" class="">进口个人护理</a>
+                                                </dd>
+                                                <dd class="floatLeft show-more">
+                                                    <h3 class="pointer clearfix"><span>更多 &gt; </span></h3>
+                                                </dd>
+                                            </dl>
+                                            <dl class="relative clearfix" style="border-bottom:0">
+                                                <dt class="floatLeft"><a href="/">企业类型：</a></dt>
+                                                <dd class="floatLeft show-con">
+                                                    <a href="/" class="">有限公司</a>
+                                                    <a href="/" class="">股份有限公司</a>
+                                                    <a href="/" class="">个体户</a>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="firm_list_content">
+                                    <ul>
+                                        <li>
+                                            <div class="list_left">
+                                                <div class="list_left_top">
+                                                    <img src="./img1/头条.png" alt="">
+                                                    <span>南山区大概发发发有限责任公司分公司</span>
+                                                    <div class="icon">
+                                                        设立登记受理通知书已打印
+                                                    </div>
+                                                </div>
+                                                <div class="list_left_bottom">
+                                                    <div class="neo">
+                                                        <span>企业类型：有限公司</span>
+                                                    </div>
+                                                    <div class="two">
+                                                        <span>申请人：张三</span>
+                                                    </div>
+                                                    <div class="three">
+                                                        <span>行业：石油采集</span>
+                                                    </div>
+                                                    <div class="four">
+                                                        <span>证件编号：412828199611011548</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="list_right">
+                                                <div>
+                                                    <img src="./img1/查看 (1).png" alt="">
+                                                    <span>查看</span>
+                                                </div>
+                                                <div>
+                                                    <img src="./img1/修改 (1).png" alt="">
+                                                    <span>修改材料</span>
+                                                </div>
+                                                <div>
+                                                    <img src="./img1/编辑.png" alt="">
+                                                    <span>继续录入</span>
+                                                </div>
+                                                <div>
+                                                    <img src="./img1/审核 (1).png" alt="">
+                                                    <span>审核</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="list_left">
+                                                <div class="list_left_top">
+                                                    <img src="./img1/头条.png" alt="">
+                                                    <span>上海东江建筑装饰工程有限公司大庆分公司</span>
+                                                    <div class="icon">
+                                                        设立录入已完成
+                                                    </div>
+                                                </div>
+                                                <div class="list_left_bottom">
+                                                    <div class="neo">
+                                                        <span>企业类型：有限公司</span>
+                                                    </div>
+                                                    <div class="two">
+                                                        <span>申请人：张三</span>
+                                                    </div>
+                                                    <div class="three">
+                                                        <span>行业：石油采集</span>
+                                                    </div>
+                                                    <div class="four">
+                                                        <span>证件编号：412828199611011548</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="list_right">
+                                                <div>
+                                                    <img src="./img1/查看 (1).png" alt="">
+                                                    <span>查看</span>
+                                                </div>
+                                                <div>
+                                                    <img src="./img1/修改 (1).png" alt="">
+                                                    <span>修改材料</span>
+                                                </div>
+                                                <div>
+                                                    <img src="./img1/编辑.png" alt="">
+                                                    <span>继续录入</span>
+                                                </div>
+                                                <div>
+                                                    <img src="./img1/审核 (1).png" alt="">
+                                                    <span>审核</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="list_left">
+                                                <div class="list_left_top">
+                                                    <img src="./img1/头条.png" alt="">
+                                                    <span>上海东江建筑装饰工程有限公司大庆分公司</span>
+                                                    <div class="icon">
+                                                        设立录入已完成
+                                                    </div>
+                                                </div>
+                                                <div class="list_left_bottom">
+                                                    <div class="neo">
+                                                        <span>企业类型：有限公司</span>
+                                                    </div>
+                                                    <div class="two">
+                                                        <span>申请人：张三</span>
+                                                    </div>
+                                                    <div class="three">
+                                                        <span>行业：石油采集</span>
+                                                    </div>
+                                                    <div class="four">
+                                                        <span>证件编号：412828199611011548</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="list_right">
+                                                <div>
+                                                    <img src="./img1/查看 (1).png" alt="">
+                                                    <span>查看</span>
+                                                </div>
+                                                <div>
+                                                    <img src="./img1/修改 (1).png" alt="">
+                                                    <span>修改材料</span>
+                                                </div>
+                                                <div>
+                                                    <img src="./img1/编辑.png" alt="">
+                                                    <span>继续录入</span>
+                                                </div>
+                                                <div>
+                                                    <img src="./img1/审核 (1).png" alt="">
+                                                    <span>审核</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- 分页插件的放置 -->
+                                <div class="page">
+                                    <div class="box" id="box"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $(document).ready(function() {
+        $('.inp').iCheck({
+            checkboxClass: 'icheckbox_square-blue',
+            radioClass: 'iradio_square-blue',
+            increaseArea: '20%'
+        });
+
+        /* 分页的插件 */
+        $('#box').paging({
+            initPageNo: 1, // 初始页码
+            totalPages: 30, //总页数
+            totalCount: '合计300条数据', // 条目总数
+            slideSpeed: 600, // 缓动速度。单位毫秒 
+            callback: function(page) { // 回调函数 
+                console.log(page);
+            }
+        });
+
+        //为了兼容ie8 分页的位置在IE8中的定位
+        if (navigator.appName === 'Microsoft Internet Explorer') { //判断是否是IE浏览器
+            if (navigator.userAgent.match(/Trident/i) && navigator.userAgent.match(/MSIE 8.0/i)) { //判断浏览器内核是否为Trident内核IE8.0
+                $(".box").css({
+                    "margin-top": "-1%",
+                    "margin-left": "-20%"
+                })
+            }
+        };
+
+
+
+
+
+        //筛选条件的逻辑代码
+        $(".shaixuan-tj span.crumb-select-item").live('hover', function(event) {
+            if (event.type == 'mouseenter') {
+                $(this).addClass("crumb-select-itemon");
+            } else {
+                $(this).removeClass("crumb-select-itemon");
+            }
+        });
+        $(".shaixuan-tj span.crumb-select-item").live('click', function(event) {
+            event.preventDefault();
+            $(this).remove();
+            var TTR = $(this).find("em").text();
+            $(".show-con a").each(function() {
+                var TT = $(this).text();
+                THI = $(this);
+                THIPP = $(this).parents("dl");
+                if (TTR == TT) {
+                    THI.removeClass("nzw12");
+                    THIPP.css("display", "block");
+                }
+            })
+        });
+        $(".show-con a").click(function(event) {
+            event.preventDefault();
+            THIP = $(this).parents("dl");
+            if ($(this).hasClass("nzw12")) {} else {
+                $(this).addClass("nzw12");
+                var zhiclass = $(this).parents("dd").siblings("dt").find("a").text();
+                zhicon = $(this).text();
+                tianjaneir = "<span class='crumb-select-item'><a href='/'><b>" + zhiclass + "</b><em>" + zhicon + " &gt; </em></a></span>"
+                $(".shaixuan-tj").children().last().after(tianjaneir);
+                THIP.css("display", "none");
+            }
+        });
+        $(".show-more").click(function(event) {
+            event.preventDefault();
+            var ticon = $(this).find("i");
+            tspan = $(this).find("span");
+            if ($(this).hasClass("zk")) {
+                $(this).siblings(".show-con").css("height", "30px");
+                ticon.removeClass("icon-angle-up");
+                ticon.addClass("icon-angle-down");
+                tspan.html("更多");
+                $(this).removeClass("zk")
+            } else {
+                $(this).siblings(".show-con").css("height", "auto");
+                ticon.removeClass("icon-angle-down");
+                ticon.addClass("icon-angle-up");
+                tspan.html("收起");
+                $(this).addClass("zk")
+            }
+        });
+        $("#sxbtn").click(function(event) {
+            event.preventDefault();
+            var xicon = $(this).find("span i");
+            xspan = $(this).find("span em");
+            if ($(this).hasClass("zkon")) {
+                xspan.text("收起筛选");
+                xicon.removeClass("icon-angle-down");
+                xicon.addClass("icon-angle-up");
+                $(".sxcon").slideDown();
+                $(this).removeClass("zkon")
+            } else {
+                xspan.text("查看筛选");
+                xicon.removeClass("icon-angle-up");
+                xicon.addClass("icon-angle-down");
+                $(".sxcon").slideUp();
+                $(this).addClass("zkon")
+            }
+        })
+
+
+
+    });
+</script>
+
+</html>

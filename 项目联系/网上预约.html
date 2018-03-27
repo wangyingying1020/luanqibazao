@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>网上预约</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/head.css">
+    <link rel="stylesheet" href="./css/foot.css">
+    <link rel="stylesheet" href="./css/wangshang.css">
+    <link rel="stylesheet" href="./lib/lhgcalendar.css">
+    <script src="./lib/jquery-1.7.1.min.js"></script>
+    <script src="./lib/lhgcore.min.js"></script>
+    <script src="./lib/lhgcalendar.min.js"></script>
+    <script src="./js/wangshang.js"></script>
+    <script src="./js/data.js"></script>
+</head>
+
+<body>
+    <div class="head w_1366">
+        <div class="headBar w_1190">
+            <div class="headBar_left">
+                <img src="./images/header_BOZHOU01.png" alt="">
+            </div>
+            <div class="headBar_right">
+                <!-- 用户名称 -->
+                <span class="f14_w">
+                        <img src="./images/userlogo.png">
+                        &nbsp;&nbsp;欢迎您，阿凡提&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+                </span>
+                <!-- 首页 -->
+                <span id="usercenterlogo" class="f14_w hover_style">
+						<a href="" class="f14_w">
+							<span style="margin-left:5px">
+                                <img src="./images/usercenterlogo1.png" style="border:0">
+                                &nbsp;&nbsp;首页&nbsp;&nbsp;
+                            </span>
+                </a>
+                </span>
+                <span style="color:#fff">&nbsp;|&nbsp;</span>
+                <!-- 退出 -->
+                <span id="exitlogo" class="f14_w hover_style">
+                        &nbsp;<a href="" class="f14_w">
+                        <img src="./images/exitlogo.png" style="border:0">&nbsp;&nbsp;退出</a>&nbsp;&nbsp;
+                </span>
+            </div>
+        </div>
+    </div>
+    <!-- 当前位置模块 -->
+    <div class="Clocation w_1190">
+        <!-- 当前位置左侧模块 -->
+        <div class="Clocation_content">
+            <p class="top">
+                <img src="./images/sqicon.png" alt="">
+                <span>网上预约</span>
+            </p>
+            <!-- <div class="bottom">
+                <p>网上预约</p>
+            </div> -->
+            <div class="bottom_line"></div>
+        </div>
+    </div>
+    <!-- 具体内容 -->
+    <div id="main" class="w_1190">
+        <div class="top_10p"></div>
+        <div class="blsit_content">
+            <!-- 时间预约的样式 -->
+            <div class="title">
+                <span>时间预约</span>
+                <div id="myyuyue_list">
+                    <button>我的预约</button>
+                    <span class="qiu">
+                        <img src="./images/xxtx01.png" alt="">
+                        <span>2</span>
+                    </span>
+                </div>
+            </div>
+            <!-- 时间预约信息内容内容模块 -->
+            <div class="cz_list">
+                <!-- 时间预约模块内容 -->
+                <table>
+                    <tbody class="tb_body" id="abc">
+                        <tr>
+                            <td class="text_right">
+                                <span class="mustFlag">*&nbsp;</span> 选择日期：
+                            </td>
+                            <td class="NRDate">
+                                <input type="text" value="2018-01-25" class="w250_h37" id="cal11">
+                                <div class="kuang">
+                                    <img id="imgCal" src="./images/calendar_icon.png" align="absmiddle" />
+                                </div>
+                            </td>
+                            <td class="text_right">
+                                <span class="mustFlag">*&nbsp;</span> 选择业务类型：
+                            </td>
+                            <td>
+                                <!-- <input type="text" value="大庆什么公司" class="w250_h30"> -->
+                                <select class="w250_h37 selectStyle">
+                                        <option>登记材料审核</option>
+                                        <option>登记材料审核</option>
+                                        <option>登记材料审核</option>
+                                        <option>登记材料审核</option>
+                                    </select>
+                            </td>
+                            <td class="text_right">
+                                <span class="mustFlag">*&nbsp;</span> 选择办理机构：
+                            </td>
+                            <td>
+                                <select class="w250_h37 selectStyle">
+                                            <option>合肥工商行政管理局</option>
+                                            <option>合肥工商行政管理局</option>
+                                            <option>合肥工商行政管理局</option>
+                                            <option>合肥工商行政管理局</option>
+                                        </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+        <!-- 预约时间段人数统计 -->
+        <div class="top_10p" style="padding-top: 10px;"></div>
+        <div class="blsit_content">
+            <!-- 列表的样式 -->
+            <div class="title">
+                <span>预约时间段人数统计</span>
+            </div>
+            <!-- 预约时间段人数统计内容模块 -->
+            <div class="cz_list">
+                <table>
+                    <tbody class="date_body">
+                        <tr>
+                            <td colspan="4" class="top_date">上午</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="yuyue_time">09:30-10:00</div>
+                                <button title="0人已预约" class="time_btn">立即预约</button>
+                            </td>
+                            <td class="border_td">
+                                <div class="yuyue_time">09:30-10:00</div>
+                                <button title="0人已预约" class="time_btn">立即预约</button>
+                            </td>
+                            <td>
+                                <div class="yuyue_time">09:30-10:00</div>
+                                <button title="0人已预约" class="time_btn">立即预约</button>
+                            </td>
+                        </tr>
+                        <tr class="border_top">
+                            <td>
+                                <div class="yuyue_time">09:30-10:00</div>
+                                <button title="0人已预约" class="time_btn">立即预约</button>
+                            </td>
+                            <td class="border_td">
+                                <div class="yuyue_time">09:30-10:00</div>
+                                <button title="0人已预约" class="time_btn">立即预约</button>
+                            </td>
+                            <td>
+                                <div class="yuyue_time">09:30-10:00</div>
+                                <button title="0人已预约" class="time_btn">立即预约</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" class="bottom_date">下午</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="yuyue_time">09:30-10:00</div>
+                                <button title="0人已预约" class="time_btn">立即预约</button>
+                            </td>
+                            <td class="border_td">
+                                <div class="yuyue_time">09:30-10:00</div>
+                                <button title="0人已预约" class="time_btn">立即预约</button>
+                            </td>
+                            <td>
+                                <div class="yuyue_time">09:30-10:00</div>
+                                <button title="0人已预约" class="time_btn">立即预约</button>
+                            </td>
+                        </tr>
+                        <tr class="border_top">
+                            <td>
+                                <div class="yuyue_time">09:30-10:00</div>
+                                <button title="0人已预约" class="time_btn">立即预约</button>
+                            </td>
+                            <td class="border_td">
+                                <div class="yuyue_time">09:30-10:00</div>
+                                <button title="0人已预约" class="time_btn">立即预约</button>
+                            </td>
+                            <td>
+                                <div class="yuyue_time">09:30-10:00</div>
+                                <button title="0人已预约" class="time_btn">立即预约</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- 我的预约 -->
+        <div class="top_10p" style="padding-top: 10px;"></div>
+        <div class="blsit_content">
+            <!-- 列表的样式 -->
+            <div class="title">
+                <span>我的预约</span>
+            </div>
+            <!-- 出质人列表信息内容内容模块 -->
+            <div class="cz_list">
+                <table class="my_yuyue">
+                    <thead>
+                        <tr>
+                            <th>我的预约校验码</th>
+                            <th>预约日期</th>
+                            <th>预约时间段</th>
+                            <th>操作</th>
+                        </tr>
+                        <tbody>
+                            <tr>
+                                <td>255411</td>
+                                <td>2018年1月25号</td>
+                                <td>9:30-10:00</td>
+                                <td>
+                                    <button class="dayin_btn">打印号码条</button>
+                                    <button class="qx_btn">取消预约</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>255411</td>
+                                <td>2018年1月25号</td>
+                                <td>9:30-10:00</td>
+                                <td>
+                                    <button class="dayin_btn">打印号码条</button>
+                                    <button class="qx_btn">取消预约</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>255411</td>
+                                <td>2018年1月25号</td>
+                                <td>9:30-10:00</td>
+                                <td>
+                                    <button class="dayin_btn">打印号码条</button>
+                                    <button class="qx_btn">取消预约</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+        <!-- 预约规则 -->
+        <div class="top_10p" style="padding-top: 10px;"></div>
+        <div class="blsit_content">
+            <!-- 列表的样式 -->
+            <div class="title">
+                <span>预约规则</span>
+            </div>
+            <!-- 出质人列表信息内容内容模块 -->
+            <div class="cz_list" style="padding-left:30px">
+                <!-- <div>预约规则：</div> -->
+                <p class="guize">1、申请人可按时间段预约次日起5个工作日内的窗口业务，预约成功并按本规则在规定时间内前往窗口办理业务的，窗口优先办理。</p>
+                <p class="guize">2、未按规定取消或者存在倒卖、串用、虚拟占用号码资源等嫌疑的，将限制业务并可追究相关责任。</p>
+                <p class="guize">3、特殊情况下，窗口可无条件更改、取消已办理的预约，请及时关注相关公告、通知。</p>
+                <p class="guize">4、登记窗口对本规则拥有最终解释权。</p>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+    <!-- 脚部模块 -->
+    <div class="foot w_1366">
+        <!-- 脚部图片 -->
+        <div class="foot_img">
+            <img src="./images/footerDZ.png" alt="">
+        </div>
+        <!-- 脚部内容 -->
+        <div class="foot_content">
+            <span>请使用IE8及以上浏览器(此类型浏览器可以生成章程)进行访问
+                        <br>
+                        山西省工商行政管理局 版权所有
+                    </span>
+            <br>
+            <span>地址：山西省太原市长风大街108号 邮编：030006 电话：0351-7680468</span>
+            <br>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- 遮罩层 -->
+    <div class="cover">
+        <div class="zzc"></div>
+        <!-- 我的预约列表 -->
+        <div class="myReserve_list" id="myyuyue">
+            <div class="title2">
+                <span>我的预约列表</span>
+                <button class="tk_btn" id="sqsp_btn">×</button>
+            </div>
+            <div class="conten2">
+                <table class="yuyue">
+                    <thead>
+                        <tr>
+                            <th>我的预约校验码</th>
+                            <th>预约日期</th>
+                            <th>预约时间段</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody class="yuyue_tbody">
+                        <tr>
+                            <td>42541</td>
+                            <td>2018年1月25号</td>
+                            <td>9:00-9:30</td>
+                            <td>
+                                <button>打印号码条</button>
+                                <button class="qx">取消预约</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>42541</td>
+                            <td>2018年1月25号</td>
+                            <td>9:00-9:30</td>
+                            <td>
+                                <button>打印号码条</button>
+                                <button class="qx">取消预约</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>42541</td>
+                            <td>2018年1月25号</td>
+                            <td>9:00-9:30</td>
+                            <td>
+                                <button>打印号码条</button>
+                                <button class="qx">取消预约</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 预约时间-->
+        <div class="myReserve_list" id="blrInfo">
+            <div class="title2">
+                <span>弹框</span>
+                <button class="tk_btn" id="sqsp_btn2">×</button>
+            </div>
+            <div class="conten2">
+                <div class="top_10p" style="padding-top: 10px;"></div>
+                <div class="blsit_content">
+                    <!-- 列表的样式 -->
+                    <div class="title">
+                        <span>提示:</span>
+                    </div>
+                    <!-- 出质人列表信息内容内容模块 -->
+                    <div class="cz_list">
+                        <div class="tishi">
+                            尊敬的客户，您预约于2018年2月1日 15:15-15:30时段申请办理“设立登记材料审核”业务，请您确认信息。
+                        </div>
+                    </div>
+                </div>
+                <table>
+                    <tbody class="tb_body reg_body">
+                        <tr>
+                            <td class="text_right td_wh">
+                                <span class="mustFlag">*&nbsp;</span>办理人姓名：
+                            </td>
+                            <td>
+                                <input type="text" value="嘻嘻" class="w415_h37">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text_right td_wh">
+                                <span class="mustFlag">*&nbsp;</span>办理人身份证号：
+                            </td>
+                            <td>
+                                <input type="text" value="412828199511023645" class="w415_h37">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text_right td_wh">
+                                <span class="mustFlag">*&nbsp;</span>办理人手机号：
+                            </td>
+                            <td>
+                                <input type="text" value="15036030164" class="w415_h37">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="btn">
+                    <button>预约</button>
+                    <button>返回</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

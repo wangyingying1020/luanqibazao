@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./lib/jquery-1.7.1.min.js"></script>
+</head>
+<style>
+    .main {
+        display: flex;
+    }
+    
+    ul {
+        list-style: none;
+    }
+    
+    div.content {
+        width: 200px;
+        height: 100px;
+        border: 1px solid #cccccc;
+    }
+    
+    div.content p {
+        display: none;
+    }
+    
+    .haha {
+        color: red;
+    }
+</style>
+
+<body>
+    <div class="main">
+        <ul>
+            <li>导航1</li>
+            <li>导航2</li>
+            <li>导航3</li>
+        </ul>
+        <div class="content">
+            <p>内容1</p>
+            <p>内容2</p>
+            <p>内容3</p>
+        </div>
+    </div>
+
+</body>
+<script>
+    //默认显示
+    var i = 0;
+    var tab_list = $("li");
+    var tab_content = $("p");
+    tab_list.eq(i).addClass("haha").siblings().removeClass("haha");
+    tab_content.eq(i).show().siblings().hide();
+    tab_list.click(function() {
+        i = $(this).index();
+        $(this).addClass("haha").siblings().removeClass("haha");
+        tab_content.eq(i).show().siblings().hide();
+    });
+</script>
+
+</html>

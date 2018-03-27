@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>动态生成元素并获取对应的Id</title>
+    <script src="./lib/jquery-1.7.1.min.js"></script>
+</head>
+
+<body>
+    <button id="btn">点击生成元素</button>
+    <div id="abc1">
+        <div id="aa1">
+            <select class="slc1">
+                        <option>点击123</option>
+                        <option>点击456</option>
+            </select>
+
+        </div>
+    </div>
+</body>
+<script>
+    var i = 1;
+    var a = 1;
+    $("#btn").click(function() {
+        i += 1;
+        var html = '<span id="sp' + i + '" class="or">并且</span>' +
+            ' <div id="bb' + i + '" class="haha">' +
+            '<select class="slc1">' +
+            '<option>点击123</option>' +
+            '<option>点击456</option>' +
+            '</select>'
+        '</div>';
+        $("#abc1").append(html);
+
+    });
+    $(".slc1").change(function() {
+        a += 1;
+        var html = '<select id="lll' + a + '">' +
+            '<option>123</option>' +
+            '<option>456</option>' +
+            '<option>12gg3</option>' +
+            '</select>' +
+            '<input type="text" id="ttt' + a + '">';
+        $("#aa1").replaceWith(html);
+        var id1 = $("select").attr('id');
+        var id2 = $("input").attr("id");
+        alert(id1 + "----" + id2)
+
+
+    })
+    $("#abc1").on("change", "select", function() {
+        a += 1;
+        var html = '<select id="lll' + a + '">' +
+            '<option>123</option>' +
+            '<option>456</option>' +
+            '<option>12gg3</option>' +
+            '</select>' +
+            '<input type="text" id="ttt' + a + '">';
+        $(".haha").replaceWith(html);
+        var spanId = $("#abc1").find(".or").attr("id");
+        var id1 = $("select").attr('id');
+        var id2 = $("input").attr("id");
+        alert(id1 + "----" + id2 + '----' + spanId);
+    })
+</script>
+
+</html>

@@ -1,0 +1,222 @@
+/* 公共样式 */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft Yahei";
+}
+
+body {
+    background: none;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    outline: none;
+    box-shadow: none;
+}
+
+select {
+    outline: none;
+    box-shadow: none;
+}
+
+textarea {
+    outline: none;
+    box-shadow: none;
+}
+
+
+/* 内容样式 */
+
+.main {
+    width: 100%;
+}
+
+.main .top_title {
+    width: 100%;
+    height: 82px;
+    background: #154F99;
+}
+
+
+/* 身体内容 */
+
+.main .body_content {
+    width: 100%;
+    height: 900px;
+}
+
+
+/* 身体内容左侧 */
+
+.main .body_content .left {
+    width: 12%;
+    height: 900px;
+    background: #F7F7F7;
+    float: left;
+}
+
+
+/* 身体右侧部分 */
+
+
+/* 打开页面脑导航 */
+
+.main .body_content .right {
+    width: 88%;
+    height: 100%;
+    float: right;
+}
+
+.main .body_content .right .top_nav {
+    width: 100%;
+    height: 27px;
+    background: #E7E7E7;
+}
+
+
+/* 公司名称 */
+
+.main .body_content .right .firm_name {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 25px;
+    color: #154F99;
+    font-weight: 900;
+    padding-top: 15px;
+}
+
+
+/* 内容tab切换区域 */
+
+
+/* 手风琴插件的样式 */
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+dl {
+    font-family: "Microsoft Yahei";
+}
+
+dt {
+    color: #000000;
+    font-family: "Microsoft Yahei";
+    color: #707070;
+}
+
+dt img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+
+/* 表格样式 */
+
+.main .body_content .right .daimabiji-container .container dl dd .apply_from {
+    width: 100%;
+}
+
+.main .body_content .right .daimabiji-container .container dl dd .apply_from p {
+    /* font-size: 16px; */
+    font-weight: 700;
+    font-family: "Microsoft Yahei";
+}
+
+.main .body_content .right .daimabiji-container .container dl dd .apply_from table {
+    width: 100%;
+}
+
+.main .body_content .right .daimabiji-container .container dl dd .apply_from table tr {
+    height: 60px;
+}
+
+.main .body_content .right .daimabiji-container .container dl dd .apply_from table td {
+    width: 27%;
+}
+
+.main .body_content .right .daimabiji-container .container dl dd .apply_from table td input[type="text"] {
+    width: 210px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    behavior: url(./yuan/PIE.htc);
+}
+
+.main .body_content .right .daimabiji-container .container dl dd .apply_from table td select {
+    width: 212px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    behavior: url(./yuan/PIE.htc);
+}
+
+.main .body_content .right .daimabiji-container .container dl dd .apply_from table td textarea {
+    width: 100%;
+    /*  height: 30px; */
+    /* line-height: 30px; */
+    height: 70px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    behavior: url(./yuan/PIE.htc);
+    resize: none;
+}
+
+.main .body_content .right .daimabiji-container .container dl dd .apply_from table span {
+    margin-left: 64px;
+}
+
+.main .body_content .right .daimabiji-container .container dl dd .apply_from table span:nth-child(1) {
+    margin-left: 0px;
+}
+
+.main .body_content .right .daimabiji-container .container dl dd .apply_from table span:nth-child(3) {
+    margin-left: 0px;
+}
+
+
+/* 文字局右 */
+
+.main .body_content .right .daimabiji-container .container dl dd .apply_from table td.font_r {
+    text-align: right;
+    padding-right: 10px;
+    width: 16%;
+}
+
+
+/* 按钮组 */
+
+.main .body_content .right .daimabiji-container .container dl dd .btn {
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    line-height: 70px;
+}
+
+.main .body_content .right .daimabiji-container .container dl dd .btn button {
+    margin-left: 10px;
+    width: 125px;
+    height: 40px;
+    border: none;
+    background: #3B8AC7;
+    border-radius: 5px;
+    behavior: url(./yuan/PIE.htc);
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 700;
+}

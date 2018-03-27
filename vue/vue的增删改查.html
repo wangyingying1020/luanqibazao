@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../lib/jquery-1.7.1.min.js"></script>
+    <script src="./vue.js"></script>
+    <style>
+        body {
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+        
+        .popUp {
+            width: 500px;
+        }
+        
+        .add {
+            padding-top: 50px;
+        }
+        
+        .amend {
+            padding-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <table>
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                    <th>个性签名</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="(tiem,index) in list">
+                    <td>{{tiem.id}}</td>
+                    <td>{{tiem.name}}</td>
+                    <td>{{tiem.content}}</td>
+                    <td>
+                        <button @click="look(index)">查看</button>
+                        <button @click="modification(index)">修改</button>
+                        <button @click="add">增加</button>
+                        <button>删除</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- 查看的弹出框 -->
+        <haha :look_obj="look_obj" v-show="look_template" :show="look_template" @erzi="getShow"></haha>
+        <!-- 增加的弹出框 -->
+        <lala :list1="list" @listgengxin="getList" v-show="add_list" @erzi="getShow"></lala>
+        <!-- 修改的弹出框 再写这个组件的时候 发现组件的成员props 该成员不支持驼峰式命名法-->
+        <amend :amend_list="amendObj" v-show="amend_list" @erzi="getShow"></amend>
+        <!-- 删除 -->
+        <div class="remove">
+
+        </div>
+
+
+
+    </div>
+</body>
+<script>
+    /* 查看的组件 */
+    var look_popUp = {
+        props: ['look_obj', 'show'],
+        methods: {
+            btn_queren: function() {
+                this.$emit("erzi", false);
+            },
+        },
+        template: '  <div class="popUp">' +
+            '<div class="title">查看详细信息</div>' +
+            '<table>' +
+            '<tbody>' +
+            '<td>' +
+            '<tr>{{look_obj.id}}</tr>' +
+            '<td>{{look_obj.name}}</td>' +
+            '<td>{{look_obj.content}}</td>' +
+            '</td>' +
+            '</tbody>' +
+            '</table>' +
+            '<button @click="btn_queren" >确定</button>' +
+            '</div>'
+
+    };
+    /* 增加的组件 */
+    var add_tanchu = {
+        props: ['list1'],
+        data: function() {
+            return {
+                name: "",
+                content: ""
+            }
+        },
+        methods: {
+            add_list: function() {
+                if (this.name == "" || this.name == "" || this.content == "") {
+                    alert("请将内容补充完整");
+                } else {
+                    var id = 0;
+                    this.list1.forEach(function(tiem, index) {
+                        id = index + 2;
+                    });
+                    /*  alert(id) */
+                    var obj = {
+                        "id": id,
+                        "name": this.name,
+                        "content": this.content
+                    };
+                    /* console.log(obj); */
+                    this.list1.push(obj);
+                    this.$emit("listgengxin", this.list1);
+                    this.$emit("erzi", false);
+                    this.name = "";
+                    this.content = "";
+
+                };
+            }
+        },
+        template: '<div class="add">' +
+            '<input type="text" v-model="name" placeholder="姓名" />' +
+            '<input type="text" v-model="content" placeholder="个性签名" />' +
+            '<button @click="add_list">添加</button>' +
+            '</div>'
+    };
+    /* 修改的组件 */
+    var amend = {
+        props: ["amend_list"],
+        data: function() {
+            return {
+
+            }
+        },
+        computed: {
+            obj: function() {
+                return JSON.parse(JSON.stringify(this.amend_list))
+            }
+
+        },
+        methods: {
+            amendClick: function() {
+                this.obj = this.amend_list;
+                this.$emit("erzi", false);
+                console.log(this.amend_list);
+                console.log(this.obj)
+            }
+        },
+        template: '  <div class="amend">' +
+            '<input type="text" :value="obj.id"  readonly="readonly"  />' +
+            '<input type="text" v-model="obj.name" />' +
+            '<input type="text" v-model="obj.content" />' +
+            '<button @click="amendClick">修改</button>' +
+            '</div>'
+    };
+    var app = new Vue({
+        el: "#app",
+        data: {
+            list: [{
+                "id": 1,
+                "name": "dongbian",
+                "content": "哈哈"
+            }, {
+                "id": 2,
+                "name": "xibian",
+                "content": "啦啦"
+            }, {
+                "id": 3,
+                "name": "nanbian",
+                "content": "hehe"
+            }],
+            look_obj: 0,
+            look_template: false,
+            add_list: false,
+            amend_list: false,
+            amendObj: '',
+        },
+        methods: {
+            add: function() {
+                this.add_list = true;
+            },
+            look: function(index) {
+                var arr = this.list.slice(index, index + 1);
+                var obj = arr[0];
+                this.look_obj = obj;
+                this.look_template = true;
+            },
+            modification: function(index) {
+                this.amend_list = true;
+                var obj = null;
+                this.list.forEach(function(time, i) {
+                    if (i == index) {
+                        obj = time;
+                    }
+
+                });
+                this.amendObj = obj;
+                /* console.log(this.amendObj) */
+            },
+            remove: function() {
+
+            },
+            getShow: function(abc) {
+                this.look_template = abc;
+                this.add_list = abc;
+                this.amend_list = abc;
+            },
+            getList: function(abc) {
+                /*  console.log(abc); */
+                this.list = abc;
+            }
+        },
+        components: {
+            'haha': look_popUp,
+            'lala': add_tanchu,
+            'amend': amend
+        }
+    })
+</script>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./jquery-1.7.1.min.js"></script>
+    <style>
+        .dv {
+            width: 170px;
+            height: 170px;
+            background: #cccccc;
+            border: 1px solid #000000;
+            border-radius: 15px;
+            margin: 0 auto;
+            margin-top: 100px;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+        
+        .xuanzhuan {
+            width: 170px;
+            height: 50px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -25px;
+            margin-left: -85px;
+            /* display: flex;
+            justify-content: space-around; */
+            animation: run 2s 0s linear infinite;
+        }
+        
+        .yuan {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            float: left;
+            animation: counter-clockwise1 2s 1s linear infinite;
+        }
+        
+        .yuan:nth-child(2) {
+            margin: 0 10px;
+        }
+        
+        .yuan img {
+            width: 50px;
+            height: 50px;
+            animation: counter-clockwise 2s 0s linear infinite;
+        }
+        
+        @keyframes run {
+            0%,
+            60% {
+                transform: rotate(360deg);
+            }
+            80% {
+                transform: rotate(180deg);
+            }
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+        
+        @keyframes counter-clockwise1 {
+            0%,
+            60% {
+                transform: scale(1);
+            }
+            80% {
+                transform: scale(0.5);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes counter-clockwise {
+            0%,
+            60% {
+                transform: rotate(0deg);
+            }
+            80% {
+                transform: rotate(180deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .tk {
+            width: 400px;
+            height: 300px;
+            font-size: 20px;
+            color: red;
+            font-weight: 900;
+            margin: 0 auto;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dv">
+        <div class="xuanzhuan">
+            <div class="yuan">
+                <img src="./img/猪猪.png" alt="">
+            </div>
+            <div class="yuan">
+                <img src="./img/猪猪.png" alt="">
+            </div>
+            <div class="yuan">
+                <img src="./img/猪猪.png" alt="">
+            </div>
+        </div>
+        <!-- <div class="zg">
+            <img src="./img/猪猪.png" alt="">
+            <img src="./img/猪猪.png" alt="">
+            <img src="./img/猪猪.png" alt="">
+        </div> -->
+    </div>
+    <div class="tk">张子雨是猪 ^(*￣(oo)￣)^</div>
+</body>
+<script>
+    /*  $(function() {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                setTimeout(function() { //5秒后框框消失   
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    $(".dv").css("display", "none");
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    $(".tk").show(1000);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                }, 4000);
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            }); */
+</script>
+
+</html>

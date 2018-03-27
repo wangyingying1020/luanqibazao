@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./lib/jquery-1.7.1.min.js"></script>
+</head>
+
+<body>
+    <input type="text" id="haha">
+</body>
+<script>
+    $(function() {
+        $("#haha").blur(function() {
+            var value = $(this).val();
+            var json = "{name:123}";
+            if (json == "{}") {
+                alert("相等")
+            } else {
+                alert("不相等")
+            }
+            if (value.length == 0) {
+                alert("请输入值")
+            } else {
+                alert("abc")
+            }
+
+        })
+    })
+</script>
+
+</html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>股权出质</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/head.css">
+    <link rel="stylesheet" href="./css/foot.css">
+    <link rel="stylesheet" href="./css/123.css">
+    <link rel="stylesheet" href="./lib/lhgcalendar.css">
+    <script src="../lib/jquery-1.7.1.min.js"></script>
+    <script src="./lib/lhgcore.min.js"></script>
+    <script src="./lib/lhgcalendar.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/data.js"></script>
+</head>
+
+<body>
+    <div class="head w_1366">
+        <div class="headBar w_1190">
+            <div class="headBar_left">
+                <img src="./images/header_BOZHOU01.png" alt="">
+            </div>
+            <div class="headBar_right">
+                <!-- 用户名称 -->
+                <span class="f14_w">
+                        <img src="./images/userlogo.png">
+                        &nbsp;&nbsp;欢迎您，阿凡提&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+                </span>
+                <!-- 首页 -->
+                <span id="usercenterlogo" class="f14_w hover_style">
+						<a href="" class="f14_w">
+							<span style="margin-left:5px">
+                                <img src="./images/usercenterlogo1.png" style="border:0">
+                                &nbsp;&nbsp;首页&nbsp;&nbsp;
+                            </span>
+                </a>
+                </span>
+                <span style="color:#fff">&nbsp;|&nbsp;</span>
+                <!-- 退出 -->
+                <span id="exitlogo" class="f14_w hover_style">
+                        &nbsp;<a href="" class="f14_w">
+                        <img src="./images/exitlogo.png" style="border:0">&nbsp;&nbsp;退出</a>&nbsp;&nbsp;
+                </span>
+            </div>
+        </div>
+    </div>
+    <!-- 当前位置模块 -->
+    <div class="Clocation w_1190">
+        <!-- 当前位置左侧模块 -->
+        <div class="Clocation_left">
+            <span>
+                <img src="./images/nowicon.png" alt="">
+            </span>
+            <span class="f16_b">当前位置:</span>
+            <span class="f16_b">股权出质</span>
+        </div>
+        <!-- 当前位置名称模块 -->
+        <div class="Clocation_name">
+            <span id="locationsssEntName">
+                     肇州县断点试试有限责任公司
+            </span>
+            <p>统一社会信息代码：91230600MA18WXWM4M</p>
+        </div>
+    </div>
+    <!-- tab切换模块 -->
+    <div id="main" class="w_1190">
+        <ul class="nav1 w_1190">
+            <li class="f14_w">1 设立登记</li>
+            <li class="f14_w">2 委托代理人</li>
+            <li class="f14_w">3 上传材料</li>
+            <li class="f14_w">3 上传材料</li>
+        </ul>
+        <ul class="blsit-list w_1190">
+            <li>
+                点击
+            </li>
+            <li>B</li>
+            <li>
+                <!-- 发起人出质列表 -->
+                <div class="top_10p"></div>
+                <div class="blsit_content">
+                    <!-- 列表的样式 -->
+                    <div class="title cz_title">
+                        <span>发起人出质列表</span>
+                    </div>
+                    <!-- 表格内容模块 -->
+                    <table>
+                        <thead class="cz_list">
+                            <tr class="">
+                                <th>选择</th>
+                                <th>出质人姓名</th>
+                                <th>出质人证照号码</th>
+                                <th>质权人姓名</th>
+                                <th>质权人证照号码</th>
+                                <th>出质股权数额</th>
+                                <th>单位</th>
+                                <th>被担保债权数额(万元)</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tb_body cz_body">
+                            <tr>
+                                <td>
+                                    <input type="radio" name="" id="">
+                                </td>
+                                <td>胡海泉</td>
+                                <td>44451154</td>
+                                <td>胡海泉</td>
+                                <td>41544254</td>
+                                <td>8441</td>
+                                <td>万元</td>
+                                <td>44551</td>
+                                <td>出质</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- 登记事项 -->
+                <div class="top_10p mg_top10"></div>
+                <div class="blsit_content">
+                    <!-- 列表的样式 -->
+                    <div class="title">
+                        <span>登记事项</span>
+                    </div>
+                    <!-- 表格内容模块 -->
+                    <table>
+                        <tbody class="tb_body reg_body">
+                            <tr>
+                                <td class="text_right">
+                                    股权所在公司：
+                                </td>
+                                <td>
+                                    <input type="text" value="大庆什么公司" class="w250_h30">
+                                </td>
+                                <td class="text_right">
+                                    <span class="mustFlag">*&nbsp;</span> 质权人证照号码：
+                                </td>
+                                <td>
+                                    <input type="text" value="大庆什么公司" class="w250_h30">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text_right">
+                                    注册号：
+                                </td>
+                                <td>
+                                    <input type="text" value="大庆什么公司" class="w250_h30">
+                                </td>
+                                <td class="text_right">
+                                    出质单位：
+                                </td>
+                                <td>
+                                    <input type="text" value="大庆什么公司" class="w250_h30">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text_right">
+                                    统一社会信息代码：
+                                </td>
+                                <td>
+                                    <input type="text" value="大庆什么公司" class="w250_h30">
+                                </td>
+                                <td class="text_right">
+                                    出质币种：
+                                </td>
+                                <td>
+                                    <!-- <input type="text" value="人民币元" class="w250_h30"> -->
+                                    <select class="w250_h30 selectStyle">
+                                        <option>万元</option>
+                                        <option>111万元</option>
+                                        <option>2222万元</option>
+                                        <option>3333万元</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text_right">
+                                    <span class="mustFlag">*&nbsp;</span> 出质人姓名(名称)：
+                                </td>
+                                <td class="NRDate">
+                                    <input type="text" value="呵呵哒" class="w250_h30">
+                                    <div class="kuang">
+                                        <img src="./images/xuanze.png" alt="">
+                                    </div>
+                                </td>
+                                <td class="text_right">
+                                    <span class="mustFlag">*&nbsp;</span> 出质股权数额：
+                                </td>
+                                <td>
+                                    <input type="text" value="大庆什么公司" class="w250_h30">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text_right">
+                                    <span class="mustFlag">*&nbsp;</span> 出质股人证照号码：
+                                </td>
+                                <td>
+                                    <input type="text" value="大庆什么公司" class="w250_h30">
+                                </td>
+                                <td class="text_right">
+                                    <span class="mustFlag">*&nbsp;</span> 出质日期起：
+                                </td>
+                                <td class="NRDate">
+                                    <input type="text" value="大庆什么公司" class="w250_h30" id="cal1">
+                                    <div class="kuang">
+                                        <img id="imgCal" src="./images/calendar_icon.png" align="absmiddle" />
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text_right">
+                                    <span class="mustFlag">*&nbsp;</span> 质权人姓名：
+                                </td>
+                                <td>
+                                    <input type="text" value="大庆什么公司" class="w250_h30">
+                                </td>
+                                <td class="text_right">
+                                    <span class="mustFlag">*&nbsp;</span> 出质日期止：
+                                </td>
+                                <td class="NRDate">
+                                    <input type="text" value="大庆什么公司" class="w250_h30" id="cal2">
+                                    <div class="kuang">
+                                        <img id="imgCa2" src="./images/calendar_icon.png" align="absmiddle" />
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- 申报事项 -->
+                <div class="top_10p mg_top10"></div>
+                <div class="blsit_content">
+                    <!-- 列表的样式 -->
+                    <div class="title">
+                        <span>申报事项</span>
+                    </div>
+                    <!-- 表格内容模块 -->
+                    <table>
+                        <tbody class="tb_body app_body">
+                            <tr>
+                                <td class="text_right">
+                                    股权所在公司：
+                                </td>
+                                <td>
+                                    <input type="text" value="大庆什么公司" class="w250_h30">
+                                </td>
+                                <td class="text_right">
+                                    <span class="mustFlag">*&nbsp;</span> 质权人证照号码：
+                                </td>
+                                <td>
+                                    <!-- <input type="text" value="大庆什么公司" class="w250_h30"> -->
+                                    <select class="w250_h30 selectStyle">
+                                        <option>万元</option>
+                                        <option>111万元</option>
+                                        <option>2222万元</option>
+                                        <option>3333万元</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text_right">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;出质人类型：
+                                </td>
+                                <td>
+                                    <select class="w250_h30 selectStyle">
+                                        <option>公司</option>
+                                        <option>个体户</option>
+                                        <option>2222万元</option>
+                                        <option>3333万元</option>
+                                    </select>
+                                </td>
+                                <td class="text_right">
+                                    股权类型：
+                                </td>
+                                <td>
+                                    <select class="w250_h30 selectStyle">
+                                        <option>公司</option>
+                                        <option>个体户</option>
+                                        <option>2222万元</option>
+                                        <option>3333万元</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text_right">
+                                    质权人类型：
+                                </td>
+                                <td>
+                                    <select class="w250_h30 selectStyle">
+                                        <option>公司</option>
+                                        <option>个体户</option>
+                                        <option>2222万元</option>
+                                        <option>3333万元</option>
+                                    </select>
+                                </td>
+                                <td class="text_right">
+
+                                </td>
+                                <td>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text_right">
+                                    备注：
+                                </td>
+                                <td class="NRDate colspan" colspan="3">
+                                    <!-- <input type="text" value="呵呵哒" class="w250_h30">
+                                    <img src="./images/xuanze.png" alt=""> -->
+                                    <!-- <textarea cols="30" rows="4"></textarea> -->
+                                    <!-- <input type="text"> -->
+                                    <textarea cols="30" rows="4"></textarea>
+                                    <div class="top_10p"></div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- 按钮组 -->
+                <div class="w_1190 btns">
+                    <button>新增保存</button>
+                    <button>保存并下一步</button>
+                    <button class="return">返回</button>
+                </div>
+            </li>
+            <li>D</li>
+        </ul>
+    </div>
+    <!-- 脚部模块 -->
+    <div class="foot w_1366">
+        <!-- 脚部图片 -->
+        <div class="foot_img">
+            <img src="./images/footerDZ.png" alt="">
+        </div>
+        <!-- 脚部内容 -->
+        <div class="foot_content">
+            <span>请使用IE8及以上浏览器(此类型浏览器可以生成章程)进行访问
+                    <br>
+                    山西省工商行政管理局 版权所有
+                </span>
+            <br>
+            <span>地址：山西省太原市长风大街108号 邮编：030006 电话：0351-7680468</span>
+            <br>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

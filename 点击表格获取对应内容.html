@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./lib/jquery-1.7.1.min.js"></script>
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+<script>
+    $(function() {
+        $("tr").on("click", function() {
+            var abc = $(this).children("td:eq(2)").html();
+            alert(abc)
+        })
+    })
+</script>
+
+</html>

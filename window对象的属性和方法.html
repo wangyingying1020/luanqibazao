@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="add()"></button>
+    <script>
+        function add() {
+            var e = event || window.event;
+            console.log(e);
+            console.log(e.offsetY); //鼠标位于点击元素的左边的水平位置的距离
+            console.log(e.clientY); //鼠标位于可视窗口左侧的水平位置
+            console.log(e.screenY); //鼠标相对于屏幕左侧的水平距离
+        }
+    </script>
+</body>
+
+</html>

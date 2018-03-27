@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: normal 14px/24px "微软雅黑";
+}
+
+.container {
+    min-width: 588px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.line-small,
+.line-big {
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.line-small .xm6,
+.line-small .xm3 {
+    float: left;
+    margin-left: 2px;
+    margin-top: 2px;
+}
+
+.line-big .xs6 {
+    float: left;
+}
+
+.xl12 {
+    width: 49%;
+}
+
+.xl6 {
+    width: 24.3%;
+}
+
+.line-big .xs6 {
+    width: 49%;
+    margin-left: 2px;
+    margin-top: 2px;
+    overflow: hidden;
+}
+
+.list-unstyle {
+    margin-bottom: 10px;
+}
+
+.list-unstyle li {
+    padding-left: 20px;
+}
+
+.list-unstyle li a {
+    text-decoration: none;
+    color: #333;
+}
+
+@media (max-width:800px) {
+    .container {
+        width: 588px;
+        overflow: hidden;
+    }
+    .xl12 {
+        width: 100%;
+    }
+    .xl6 {
+        width: 49.65%;
+    }
+    .line-big .xs6 {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media (min-width:801px) and (max-width:1000px) {
+    .xl12 {
+        width: 49.8%;
+    }
+    .xl6 {
+        width: 24.7%;
+    }
+    .line-big .xs6 {
+        width: 49.7%;
+    }
+}
+
+@media (min-width:1001px) and (max-width:1200px) {
+    .xl12 {
+        width: 49.8%;
+    }
+    .xl6 {
+        width: 24.7%;
+    }
+    .line-big .xs6 {
+        width: 49.7%;
+    }
+}
+
+@media (min-width:1201px) {
+    .container {
+        width: 1200px;
+    }
+}

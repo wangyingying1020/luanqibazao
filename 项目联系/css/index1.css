@@ -1,0 +1,100 @@
+/* tab切换的的内容 */
+
+#main {
+    height: 528px;
+    background: #ffffff;
+}
+
+
+/* tab切换左侧内容 */
+
+#main .nav1 {
+    float: left;
+    width: 246px;
+    height: 398px;
+    /* background: red; */
+    margin-top: 20px;
+    margin-left: 80px;
+}
+
+#main .nav1 li {
+    width: 231px;
+    height: 41px;
+    line-height: 41px;
+    /* background: url("./images/flow_r2_c2_2.png") */
+}
+
+
+/* 办理流程图片 */
+
+#main .nav1 .nav1_img {
+    border-bottom: 1px solid #13a0ef;
+    margin-bottom: 10px;
+    width: 250px;
+}
+
+
+/* 办理步骤 */
+
+#main .nav1 .nav1_lc {
+    background: url("../images/flow_r5_c2_2.png");
+    margin-top: 5px;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+#main .nav1 .nav1_lc:hover {
+    background: url("../images/flow_r2_c2_2.png");
+}
+
+
+/* 办理步骤下面的箭头 */
+
+#main .nav1 .jiantou {
+    position: relative;
+    top: 0;
+    left: 50%;
+    margin-left: -30px;
+}
+
+
+/* teb切换右侧内容 */
+
+#main .main_content {
+    width: 760px;
+    height: 93%;
+    border: 1px solid #5BC4FE;
+    margin-top: 10px;
+    margin-right: 80px;
+    float: right;
+}
+
+#main .main_content .main_content_img {
+    margin-left: 25px;
+    padding-top: 25px;
+}
+
+#main .main_content .main_content_img img {
+    margin-bottom: 25px;
+}
+
+#main .main_content .main_content_img div {
+    margin-bottom: 30px;
+}
+
+
+/* 需要切换的内容 */
+
+#main .main_content .tab_content {
+    margin-left: 25px;
+    line-height: 25px;
+    color: #767676;
+    font-size: 0.88em;
+}
+
+#main .main_content .tab_content li {
+    display: none;
+}

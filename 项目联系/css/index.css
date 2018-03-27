@@ -1,0 +1,972 @@
+/* tab切换的样式 */
+
+
+/* tab切换的导航栏样式 */
+
+
+/* 代替margin-top：10px */
+
+.mg_top10 {
+    margin-top: 10px;
+}
+
+.nav1 {
+    /* width: 1000px; */
+    background: #B7B7B7;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+
+/* tab切换的导航栏每个模块的样式 */
+
+.nav1>li {
+    float: left;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background: url("../images/centerlan.png");
+    width: 164px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: -14px;
+    background-repeat: no-repeat;
+}
+
+
+/* tab切换的导航栏第一个导航栏模块的样式 */
+
+.nav1>li:first-child {
+    width: 151px;
+    background: url("../images/firstlan.png");
+    background-repeat: no-repeat;
+    margin-left: 0px;
+}
+
+
+/* tab切换的导航内容模块的栏样式 */
+
+.blsit-list {
+    display: block;
+    /* width: 1000px; */
+    background: #ffffff;
+    /* margin-bottom: 80px; */
+}
+
+
+/* tab切换的导航栏内容每一项的样式 */
+
+.blsit-list li {
+    list-style: none;
+    width: 100%;
+    display: none;
+    padding-bottom: 80px;
+}
+
+
+/* tab切换的内容样式 */
+
+
+/* 内容的公共样式 */
+
+.blsit-list li .blsit_content {
+    width: 1162px;
+    margin: 0 auto;
+    border: 1px solid #d3d2d2;
+}
+
+
+/* 内容头部的公共样式 */
+
+.blsit-list li .blsit_content .title {
+    width: 1162px;
+    height: 48px;
+    background: #F5F7F8;
+    line-height: 48px;
+    /* border-bottom: 1px solid #d3d2d2; */
+}
+
+
+/*  内容头部文字的公共样式*/
+
+.blsit-list li .blsit_content .title span {
+    margin-left: 30px;
+    line-height: 46px;
+    /* font-family: MicrosoftYaHei-Bold; */
+    font-size: 18px;
+    color: #313131;
+    font-weight: bold;
+}
+
+
+/* tab切换的表格样式 */
+
+
+/* 内容表格的公共样式 */
+
+.blsit-list li .blsit_content table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+/* 必填标志的公共样式 */
+
+.mustFlag {
+    color: #FF0000;
+}
+
+
+/* 下拉列表的公共样式样式 */
+
+.selectStyle {
+    /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
+    width: 255px;
+    height: 35px;
+    /* border: solid 1px #000; */
+    /*很关键：将默认的select选择框样式清除*/
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /*在选择框的最右侧中间显示小箭头图片*/
+    background: url("../images/arrow.png") no-repeat scroll right center transparent;
+    /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+    /* padding-right: 14px; */
+    line-height: 35px;
+}
+
+
+/*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+
+select::-ms-expand {
+    display: none;
+}
+
+
+/* 文字居右的公共样式 */
+
+.text_right {
+    text-align: right;
+}
+
+
+/* input框宽415px 高37px的公共样式 */
+
+.w415_h37 {
+    width: 415px;
+    height: 37px;
+    border: 1px solid #CECCCD;
+    border-radius: 5px;
+    font-size: 14px;
+    padding-left: 5px;
+    line-height: 30px;
+}
+
+.w250_h37 {
+    width: 250px;
+    height: 37px;
+    border: 1px solid #CECCCD;
+    border-radius: 5px;
+    font-size: 14px;
+    padding-left: 5px;
+    line-height: 30px;
+}
+
+
+/* td需要的宽度  */
+
+.td_wh {
+    width: 205px;
+}
+
+
+/* 股权出质列表的私有样式 */
+
+.blsit-list li .blsit_content .cz_list {
+    width: 100%;
+    border-top: 1px solid #CECCCD;
+    /* height: 50px; */
+}
+
+
+/* 出质人头部的背景色 */
+
+.blsit-list li .blsit_content .cz_title {
+    background: #F6F9FF;
+}
+
+
+/* 股权出质的按钮新增按钮的样式 */
+
+#addBtnInv {
+    float: right;
+}
+
+#addBtnInv img {
+    margin-right: 20px;
+    cursor: pointer;
+    width: 101px;
+    height: 32px;
+}
+
+
+/* 出质人姓名的样式 */
+
+.blsit-list li .blsit_content .cz_person {
+    width: 100%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    height: 40px;
+    line-height: 40px;
+}
+
+
+/* 出质人姓名前面蓝色竖线的样式 */
+
+.blsit-list li .blsit_content .cz_person .divShu {
+    display: inline-block;
+    width: 2px;
+    height: 14px;
+    background: #458cde;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+
+/* 出质人姓名文字的样式 */
+
+.blsit-list li .blsit_content .cz_person .peopleName {
+    margin-left: 40px;
+    margin-top: 6px;
+    position: absolute;
+    font-family: MicrosoftYaHei;
+    font-weight: bold;
+    font-size: 16px;
+    color: #313131;
+}
+
+
+/* 出质人信息的模块 */
+
+.blsit-list li .blsit_content .cz_list .cz_message {
+    margin-left: 40px;
+    margin-top: 6px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    height: 30px;
+}
+
+
+/* 出质人信息的第一部分 */
+
+.blsit-list li .blsit_content .cz_list .cz_message .cz_message_1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+
+/* 出质人信息证件号码的部分---第二部分*/
+
+.blsit-list li .blsit_content .cz_list .cz_message .cz_message_2 {
+    position: absolute;
+    top: 0px;
+    left: 151px;
+}
+
+
+/* 出质人被担保金额数量----第三部分 */
+
+.blsit-list li .blsit_content .cz_list .cz_message .cz_message_3 {
+    position: absolute;
+    top: 0px;
+    left: 480px;
+}
+
+
+/* 出质人信息详情的文字信息的样式 */
+
+.blsit-list li .blsit_content .cz_list .cz_message .cz_message_info {
+    font-family: MicrosoftYaHei;
+    font-size: 14px;
+    color: #777777;
+    padding-left: 10px;
+}
+
+
+/* 点击修改删除按钮组 */
+
+.blsit-list li .blsit_content .cz_list .cz_message .click_btns {
+    position: absolute;
+    top: -22px;
+    left: 830px;
+}
+
+
+/* 出质人的修改，删除按钮的样式 */
+
+.blsit-list li .blsit_content .cz_list .cz_message .click_btns div {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+
+/* 出质人按钮的文字样式 */
+
+.blsit-list li .blsit_content .cz_list .cz_message .click_btns div span {
+    padding-left: 5px;
+    font-family: MicrosoftYaHei;
+    font-size: 14px;
+    color: #313131;
+    cursor: pointer;
+}
+
+
+/* 出质人申请列表的按钮样式 */
+
+
+/* 带有小球的按钮 */
+
+.blsit-list li .blsit_content .cz_list .cz_message .click_btns .sq_btns {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+
+/* 带小球的那组按钮 */
+
+.blsit-list li .blsit_content .cz_list .cz_message .click_btns .sq_btns .sq_btn {
+    position: absolute;
+    top: -14px;
+    left: 65px;
+    /* background: #528EE2; */
+    width: 16px;
+    height: 21px;
+    border-radius: 8px;
+    color: #fff;
+    /* text-align: center; */
+    padding-left: 10px;
+}
+
+
+/* 小球的图片 */
+
+.blsit-list li .blsit_content .cz_list .cz_message .click_btns .sq_btns .sq_btn img {
+    width: 20px;
+    height: 20px;
+}
+
+
+/* 小球里面的文字的样式 */
+
+.blsit-list li .blsit_content .cz_list .cz_message .click_btns .sq_btns .sq_btn span {
+    position: absolute;
+    top: 3px;
+    left: 12px;
+    color: #fff;
+    font-size: 12px;
+}
+
+
+/* 遮罩层 */
+
+.cover {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: none;
+}
+
+
+/* 包满整个body的阴影透明背景 */
+
+.cover .zzc {
+    width: 100%;
+    height: 100%;
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+    -moz-opacity: 0.7;
+    -khtml-opacity: 0.7;
+    background-color: black;
+    z-index: 1001;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+
+/* 新增出质人弹出框 */
+
+.add_czr1 {
+    border-radius: 15px;
+    width: 800px;
+    height: 700px;
+    background: #ffffff;
+    opacity: 1;
+    /* z-index: 1100; */
+    user-select: none;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    margin-left: -400px;
+    display: none;
+}
+
+
+/* 新增出质人弹出框的头部 */
+
+.cover .add_czr1 .title1 {
+    width: 800px;
+    height: 55px;
+    background: #297ACC;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+
+/* 新增弹出框的头部的文字样式 */
+
+.cover .add_czr1 .title1 span {
+    font-weight: bold;
+    cursor: default;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 55px;
+    padding-left: 15px;
+}
+
+
+/* 头部叉叉的按钮 */
+
+.cover .add_czr1 .title1 #addczr_btn {
+    position: absolute;
+    padding: 0 20px;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    text-shadow: 0 1px 0 #FFF;
+    filter: alpha(opacity=20);
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    top: 15px;
+    right: 0px;
+    outline: none
+}
+
+
+/* 新增弹出框的内容部分 */
+
+.cover .conten1 {
+    margin-top: 55px;
+    height: 600px;
+    overflow: auto
+}
+
+
+/* 新增弹出框的内容表格部分 */
+
+.cover .conten1 table {
+    width: 100%;
+}
+
+
+/*  新增弹出框的内容表格每行的行高 */
+
+.cover .conten1 table tr {
+    line-height: 60px;
+}
+
+
+/* 新增出质人下拉框的单独宽度 */
+
+.cover .conten1 table tr select {
+    width: 207px;
+}
+
+
+/* 有日期和下拉框的样式 */
+
+.cover .conten1 table tr .NRDate {
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+
+/* 这个框框是为了解决IE8和IE9input框后面有叉叉的问题*/
+
+
+/* 日期小图标的定位 */
+
+.cover .conten1 table tr .NRDate .kuang {
+    position: absolute;
+    top: 1px;
+    right: 23px;
+}
+
+
+/* 保存按钮的位置 */
+
+.cover .conten1 .btn {
+    width: 100%;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    padding-top: 15px;
+}
+
+
+/* 保存按钮的样式 */
+
+.cover .conten1 .btn button {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    cursor: pointer;
+    width: 101px;
+    margin-left: -75px;
+    margin-top: -19px;
+    background-color: #458CDE;
+    font-size: 18px;
+    color: #ffffff;
+    border: none;
+    font-family: 微软雅黑;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 25px;
+    border-radius: 5px;
+}
+
+
+/* 申请事项 */
+
+
+/* 审批事项的弹出框内容 */
+
+.add_czr2 {
+    border-radius: 15px;
+    width: 800px;
+    /* height: 600px; */
+    background: #ffffff;
+    opacity: 1;
+    /* z-index: 1100; */
+    user-select: none;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    margin-left: -400px;
+    display: none;
+}
+
+
+/* 审批出质人弹出框的头部 */
+
+.cover .add_czr2 .title2 {
+    width: 800px;
+    height: 55px;
+    background: #297ACC;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+
+/* 审批弹出框的头部的文字样式 */
+
+.cover .add_czr2 .title2 span {
+    font-weight: bold;
+    cursor: default;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 55px;
+    padding-left: 15px;
+}
+
+
+/* 审批弹出框的内容部分 */
+
+.cover .conten2 {
+    margin-top: 55px;
+}
+
+
+/* 审批弹出框的内容表格部分 */
+
+.cover .conten2 table {
+    width: 100%;
+}
+
+
+/*  审批弹出框的内容表格每行的行高 */
+
+.cover .conten2 table tr {
+    line-height: 60px;
+}
+
+
+/* 审批 */
+
+.cover .conten2 table tr .NRDate {
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+
+/* 这个待定  一会改 */
+
+.cover .conten2 table tr .NRDate .kuang {
+    position: absolute;
+    top: 1px;
+    right: 177px;
+}
+
+
+/* 保存按钮 */
+
+.cover .conten2 .btn {
+    width: 100%;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    padding-top: 15px;
+}
+
+
+/* 审批事项的按钮的具体样式 */
+
+.cover .conten2 .btn button {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    cursor: pointer;
+    width: 101px;
+    margin-left: -75px;
+    margin-top: -19px;
+    background-color: #458CDE;
+    font-size: 18px;
+    color: #ffffff;
+    border: none;
+    font-family: 微软雅黑;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 25px;
+    border-radius: 5px;
+}
+
+
+/* 里面的信息 */
+
+.cover .conten2 .blsit_content {
+    width: 750px;
+    margin: 0 auto;
+    border: 1px solid #d3d2d2;
+}
+
+.cover .conten2 .blsit_content .cz_list {
+    width: 100%;
+    border-top: 1px solid #CECCCD;
+    /* height: 50px; */
+}
+
+.cover .conten2 .blsit_content .cz_title {
+    background: #F6F9FF;
+}
+
+.cover .conten2 .blsit_content .cz_person {
+    width: 100%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.cover .conten2 .blsit_content .cz_person .divShu {
+    display: inline-block;
+    width: 2px;
+    height: 14px;
+    background: #458cde;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.cover .conten2 .blsit_content .cz_person .peopleName {
+    margin-left: 40px;
+    margin-top: 6px;
+    position: absolute;
+    font-family: MicrosoftYaHei;
+    font-weight: bold;
+    font-size: 16px;
+    color: #313131;
+}
+
+.cover .conten2 .blsit_content .cz_list .cz_message {
+    margin-left: 40px;
+    margin-top: 6px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    height: 30px;
+}
+
+
+/* 出质人 */
+
+.cover .conten2 .blsit_content .cz_list .cz_message .cz_message_1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+
+/* 证件号码 */
+
+.cover .conten2 .blsit_content .cz_list .cz_message .cz_message_2 {
+    position: absolute;
+    top: 0px;
+    left: 151px;
+}
+
+
+/* 被担保金额数量 */
+
+.cover .conten2 .blsit_content .cz_list .cz_message .cz_message_3 {
+    position: absolute;
+    top: 0px;
+    left: 480px;
+}
+
+
+/* 点击修改删除按钮组 */
+
+.cover .conten2 .blsit_content .cz_list .cz_message .click_btns {
+    position: absolute;
+    top: -22px;
+    left: 530px;
+}
+
+
+/* 审批事项信息详情的文字信息 */
+
+.cover .conten2 .blsit_content .cz_list .cz_message .cz_message_info {
+    font-family: MicrosoftYaHei;
+    font-size: 14px;
+    color: #777777;
+    padding-left: 10px;
+}
+
+
+/* 审批事项的修改，删除按钮的样式 */
+
+.cover .conten2 .blsit_content .cz_list .cz_message .click_btns div {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.cover .conten2 .blsit_content .cz_list .cz_message .click_btns div span {
+    padding-left: 5px;
+    font-family: MicrosoftYaHei;
+    font-size: 14px;
+    color: #313131;
+    cursor: pointer;
+}
+
+
+/* 审批事项的按钮样式 */
+
+.cover .conten2 .blsit_content .cz_list .cz_message .click_btns div button {
+    border: none;
+    padding-left: 5px;
+    font-family: MicrosoftYaHei;
+    font-size: 14px;
+    color: #313131;
+    cursor: pointer;
+    background: #528EE2;
+    width: 50px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.cover .conten2 .blsit_content {
+    width: 750px;
+    margin: 0 auto;
+    border: 1px solid #d3d2d2;
+}
+
+
+/* 申批事项头部的样式 */
+
+.cover .conten2 .blsit_content .title {
+    width: 750px;
+    height: 48px;
+    background: #F5F7F8;
+    line-height: 48px;
+    /* border-bottom: 1px solid #d3d2d2; */
+}
+
+
+/*  申请事项头部文字的样式*/
+
+.cover .conten2 .blsit_content .title span {
+    margin-left: 30px;
+    line-height: 46px;
+    /* font-family: MicrosoftYaHei-Bold; */
+    font-size: 18px;
+    color: #313131;
+    font-weight: bold;
+}
+
+
+/* 审批事项叉叉的样式 */
+
+.cover .add_czr2 .title2 #sqsp_btn {
+    position: absolute;
+    padding: 0 20px;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    text-shadow: 0 1px 0 #FFF;
+    filter: alpha(opacity=20);
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    top: 15px;
+    right: 0px;
+    outline: none
+}
+
+
+/* ------------------------------------------ */
+
+.cover .conten1 .blsit_content {
+    width: 750px;
+    margin: 0 auto;
+    border: 1px solid #d3d2d2;
+    margin-top: 20px;
+}
+
+.cover .conten1 .blsit_content .cz_list {
+    width: 100%;
+    border-top: 1px solid #CECCCD;
+    /* height: 50px; */
+}
+
+.cover .conten1 .blsit_content .cz_title {
+    background: #F6F9FF;
+}
+
+.cover .conten1 .blsit_content .title {
+    width: 750px;
+    height: 48px;
+    background: #F5F7F8;
+    line-height: 48px;
+    /* border-bottom: 1px solid #d3d2d2; */
+}
+
+.cover .conten1 .blsit_content .title span {
+    margin-left: 30px;
+    line-height: 46px;
+    /* font-family: MicrosoftYaHei-Bold; */
+    font-size: 18px;
+    color: #313131;
+    font-weight: bold;
+}
+
+
+/* 内容表格的公共样式 */
+
+.cover .conten1 .blsit_content table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+/* 必填标志的公共样式 */
+
+.mustFlag {
+    color: #FF0000;
+}
+
+
+/* 下拉列表的公共样式样式 */
+
+.selectStyle {
+    /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
+    width: 255px;
+    height: 35px;
+    /* border: solid 1px #000; */
+    /*很关键：将默认的select选择框样式清除*/
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /*在选择框的最右侧中间显示小箭头图片*/
+    background: url("../images/arrow.png") no-repeat scroll right center transparent;
+    /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+    /* padding-right: 14px; */
+    line-height: 35px;
+}
+
+
+/*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+
+select::-ms-expand {
+    display: none;
+}
+
+
+/* 文字居右的公共样式 */
+
+.text_right {
+    text-align: right;
+}
+
+
+/* input框宽415px 高37px的公共样式 */
+
+.w75_h30 {
+    width: 200px;
+    height: 35px;
+    border: 1px solid #CECCCD;
+    border-radius: 5px;
+    font-size: 14px;
+    padding-left: 5px;
+    line-height: 30px;
+}
+
+.cover .conten1 .blsit_content table textarea {
+    width: 95%;
+    height: 80px;
+    border: 1px solid #CECCCD;
+    border-radius: 5px;
+    /* margin-top: 10px; */
+    resize: none;
+    outline: none;
+    font-size: 16px;
+    padding-left: 5px;
+    overflow: hidden;
+}

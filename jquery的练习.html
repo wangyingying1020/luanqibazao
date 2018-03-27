@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./lib/jquery.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+        table{border-collapse:collapse;border-spacing:0;}
+        fieldset,img{border:0;}
+        address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}
+        li{list-style:none;}caption,th{text-align:left;}
+        h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+        q:before,q:after{content:'';}
+        abbr,acronym {border:0;font-variant:normal;}
+        sup {vertical-align:text-top;}
+        sub {vertical-align:text-bottom;}
+        input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}
+        legend{color:#000;}
+        /* ul{
+            display: none;
+            display: block;
+        } */
+    </style>
+</head>
+<body>
+    <ul id="bac">
+        <li>A
+            <ul>
+                <li>a
+                    <ul>
+                        <li>1</li>
+                    </ul>
+                </li>
+                <li>b</li>
+                <li>c</li>
+            </ul>
+        </li>
+        <li>B</li>
+        <li>C</li>
+        <li>D</li>
+        <li>E</li>
+    </ul>
+</body>
+<script>
+    $(function(){
+        $("#bac>li").find("ul").css("display","none");
+        $("#bac>li").click(function(){
+            $(this).children("ul").css("display","block");
+        
+        })
+    })
+</script>
+</html>

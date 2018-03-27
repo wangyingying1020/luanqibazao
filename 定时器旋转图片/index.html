@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-size: 14px;
+        }
+        
+        .d {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            position: relative;
+            margin: 50px auto;
+            text-align: center;
+            line-height: 40px;
+        }
+        
+        .d .imgs {
+            width: 25px;
+            height: 25px;
+            animation: run2 2s linear infinite;
+        }
+        
+        .small-pian {
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            animation: run 2s linear infinite;
+        }
+        
+        .small-pian .small-p {
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 0px;
+            border-radius: 50%;
+            -webkit-animation: counter-clockwise 2s linear infinite;
+            animation: counter-clockwise 2s linear infinite;
+        }
+        
+        .small-pian .small-p img {
+            width: 25px;
+            height: 25px;
+        }
+        
+        .small-pian .p1 {
+            left: 40px;
+        }
+        
+        .small-pian .p2 {
+            right: 40px;
+        }
+        
+        @keyframes run {
+            0% {
+                transform: rotate(360deg) scale(1);
+            }
+            50% {
+                transform: rotate(180deg) scale(1.5);
+            }
+            100% {
+                transform: rotate(0deg) scale(1);
+            }
+        }
+        
+        @keyframes counter-clockwise {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes run2 {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.5);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d">
+        <img src="./img/猪猪.png" alt="" class="imgs">
+        <div class="small-pian">
+            <div class="small-p p1">
+                <img src="./img/猪猪.png" alt="">
+            </div>
+            <div class="small-p p2">
+                <img src="./img/猪猪.png" alt="">
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+</script>
+
+</html>

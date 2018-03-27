@@ -1,0 +1,81 @@
+ /* 头部 */
+ 
+ .head {
+     height: 90px;
+     background: url("../images/BANER.png");
+     background-repeat: no-repeat;
+     margin-bottom: 5px;
+ }
+ /* 头部中间 */
+ 
+ .head .headBar {
+     position: relative;
+     top: 0px;
+     left: 0px;
+     height: 90px;
+     /* header_BOZHOU01.png */
+ }
+ /* 头部左侧样式 */
+ 
+ .head .headBar .headBar_left {
+     position: absolute;
+     top: 20px;
+     left: 0;
+     width: 484px;
+ }
+ /* 头部右侧样式 */
+ 
+ .head .headBar .headBar_right {
+     width: 318px;
+     height: 90px;
+     position: absolute;
+     top: 0px;
+     right: 0px;
+     line-height: 98px;
+     text-align: center;
+ }
+ 
+ .head .headBar .headBar_right .hover_style:hover {
+     background: #F5B72E;
+ }
+ /* ---------------------------------------------------------------------------------------------------------------------- */
+ /* 当前位置模块 */
+ 
+ .Clocation {
+     height: 62px;
+     /* background: red; */
+     position: relative;
+     top: 0px;
+     left: 0px;
+ }
+ /* 当前位置的左侧样式 */
+ 
+ .Clocation .Clocation_left {
+     line-height: 62px;
+     position: absolute;
+     left: 0px;
+     top: 0px;
+ }
+ /* 当前位置的名称样式 */
+ 
+ .Clocation .Clocation_name span {
+     font-family: 微软雅黑;
+     font-size: 20px;
+     color: #313131;
+     font-weight: 600;
+     height: 10px;
+     width: 100%;
+     position: absolute;
+     text-align: center;
+     height: 57px;
+     line-height: 57px;
+ }
+ 
+ .Clocation .Clocation_name p {
+     position: absolute;
+     top: 24px;
+     left: 440px;
+     line-height: 24px;
+     font-size: 14px;
+     font-family: 微软雅黑;
+ }

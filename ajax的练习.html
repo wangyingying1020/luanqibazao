@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./lib/jquery-1.7.1.min.js"></script>
+    <script src="./lib/template(1).js"></script>
+
+</head>
+
+<body>
+    <div id="dv"></div>
+    <script type="text/template" id="bt">
+        {{if isAdmin}}
+        <h1>{{title}}</h1>
+        <ul>
+            {{each list as value i}}
+            <li>索引 {{i + 1}} ：{{value}}</li>
+            {{/each}}
+        </ul>
+        {{/if}}
+    </script>
+    <script>
+        var data = {
+            title: '基本例子',
+            isAdmin: true,
+            list: ['文艺', '博客', '摄影', '电影', '民谣', '旅行', '吉他']
+        };
+        // var html = template('dvTpl', data); 
+        $('#dv').html(template('bt', data));
+    </script>
+</body>
+
+
+</html>

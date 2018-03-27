@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>设立登记录入页面</title>
+
+    <link rel="stylesheet" href="./shoufengqin/css/daimabiji-demo.css">
+    <link rel="stylesheet" href="./shoufengqin/css/reset.css">
+    <link rel="stylesheet" href="./shoufengqin/css/style.css">
+    <link rel="stylesheet" href="./sheliluru.css">
+    <!--[if IE]>
+		<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+    <script src="./jquery-1.7.1.min.js"></script>
+    <script src="./yuan/PIE_IE678.js"></script>
+    <style>
+        dt:before {
+            display: none;
+            border-color: none;
+            border-style: none;
+            border-width: 0;
+        }
+        /* #biaozhi {
+            left: -16px;
+            top: 17px;
+            position: relative;
+            width: 15px;
+            height: 15px;
+        } */
+    </style>
+
+</head>
+
+<body>
+    <div class="main">
+        <!-- 顶部 -->
+        <div class="top_title"></div>
+        <!-- 身体内容区域 -->
+        <div class="body_content">
+            <!-- 左侧 -->
+            <div class="left"></div>
+            <div class="right">
+                <div class="top_nav"></div>
+                <!-- 内容区域 -->
+                <div class="daimabiji-container">
+                    <div class="firm_name">大庆市肇州县哈阿涅骑行俱乐部 </div>
+                    <div class="container">
+                        <dl>
+                            <dt>
+                                <img src="./img1/三角形.png" alt="" id="biaozhi">
+                                申请表录入
+                                <img src="./img1/必须填.png" alt="">
+                            </dt>
+                            <dd>
+                                <div class="apply_from">
+                                    <p>个体户开业申请表</p>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td class="font_r"> * 名称：</td>
+                                                <td>
+                                                    <input type="text">
+                                                </td>
+                                                <td class="font_r">字号：</td>
+                                                <td>
+                                                    <input type="text">
+                                                </td>
+                                                <td class="font_r">企业类型中类：</td>
+                                                <td>
+                                                    <input type="text">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="font_r"> 个体工商户类型：</td>
+                                                <td>
+
+                                                    <!--   <span>
+                                                        <input type="radio" name="" id="">
+                                                        内地居民
+                                                    </span>
+                                                    <span>
+                                                        <input type="radio" name="" id="">
+                                                        台湾居民
+                                                    </span>
+                                                    <span>
+                                                        <input type="radio" name="" id="">
+                                                        香港居民
+                                                    </span>
+                                                    <span>
+                                                        <input type="radio" name="" id="">
+                                                        香港居民
+                                                    </span> -->
+                                                    <select>
+                                                        <option>香港居民</option>
+                                                        <option>香港居民</option>
+                                                        <option>香港居民</option>
+                                                        <option>香港居民</option>
+                                                    </select>
+                                                </td>
+                                                <td class="font_r"> * 行政区划：</td>
+                                                <td>
+                                                    <input type="text">
+                                                </td>
+                                                <td class="font_r"> * 行业类型：</td>
+                                                <td>
+                                                    <input type="text">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="font_r"> 重点热点行业：</td>
+                                                <td>
+                                                    <input type="text">
+                                                </td>
+                                                <td class="font_r"> 风险行业：</td>
+                                                <td>
+                                                    <select>
+                                                        <option>风险行业</option>
+                                                        <option>风险行业</option>
+                                                        <option>风险行业</option>
+                                                        <option>风险行业</option>
+                                                    </select>
+                                                </td>
+                                                <td class="font_r"> * 经营者姓名：</td>
+                                                <td>
+                                                    <input type="text">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="font_r"> 重点热点行业：</td>
+                                                <td>
+                                                    <input type="text">
+                                                </td>
+                                                <td class="font_r"> 风险行业：</td>
+                                                <td>
+                                                    <select>
+                                                            <option>风险行业</option>
+                                                            <option>风险行业</option>
+                                                            <option>风险行业</option>
+                                                            <option>风险行业</option>
+                                                        </select>
+                                                </td>
+                                                <td class="font_r"> * 经营者姓名：</td>
+                                                <td>
+                                                    <input type="text">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="font_r"> 重点热点行业：</td>
+                                                <td>
+                                                    <input type="text">
+                                                </td>
+                                                <td class="font_r"> 风险行业：</td>
+                                                <td>
+                                                    <select>
+                                                            <option>风险行业</option>
+                                                            <option>风险行业</option>
+                                                            <option>风险行业</option>
+                                                            <option>风险行业</option>
+                                                        </select>
+                                                </td>
+                                                <td class="font_r"> * 经营者姓名：</td>
+                                                <td>
+                                                    <input type="text">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="font_r">备注：</td>
+                                                <td colspan="5">
+                                                    <textarea cols="30" rows="10"></textarea>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="btn">
+                                    <button disabled="disabled">受理通知书</button>
+                                    <button disabled="disabled">暂存</button>
+                                    <button disabled="disabled">提交</button>
+                                    <button disabled="disabled">打印材料通知单</button>
+                                </div>
+                            </dd>
+
+                            <dt>申请人(委托人或代理人)信息</dt>
+                            <dd>
+                                <div class="apply_from">
+                                    <p>个体户开业申请表</p>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td class="font_r"> * 名称：</td>
+                                                <td>
+                                                    <input type="text">
+                                                </td>
+                                                <td class="font_r">字号：</td>
+                                                <td>
+                                                    <input type="text">
+                                                </td>
+                                                <td class="font_r">企业类型中类：</td>
+                                                <td>
+                                                    <input type="text">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="font_r"> 个体工商户类型：</td>
+                                                <td>
+                                                    <!-- 
+                                                    <span>
+                                                                <input type="radio" name="" id="">
+                                                                内地居民
+                                                            </span>
+                                                    <span>
+                                                                <input type="radio" name="" id="">
+                                                                台湾居民
+                                                            </span>
+
+                                                    <span>
+                                                            <input type="radio" name="" id="">
+                                                            香港居民
+                                                        </span>
+                                                    <span>
+                                                            <input type="radio" name="" id="">
+                                                            香港居民
+                                                        </span> -->
+                                                    <select>
+                                                            <option>香港居民</option>
+                                                            <option>香港居民</option>
+                                                            <option>香港居民</option>
+                                                            <option>香港居民</option>
+                                                        </select>
+
+                                                </td>
+                                                <td class="font_r"> * 行政区划：</td>
+                                                <td>
+                                                    <input type="text">
+                                                </td>
+                                                <td class="font_r"> * 行业类型：</td>
+                                                <td>
+                                                    <input type="text">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="font_r"> 重点热点行业：</td>
+                                                <td>
+                                                    <input type="text">
+                                                </td>
+                                                <td class="font_r"> 风险行业：</td>
+                                                <td>
+                                                    <select>
+                                                                <option>风险行业</option>
+                                                                <option>风险行业</option>
+                                                                <option>风险行业</option>
+                                                                <option>风险行业</option>
+                                                            </select>
+                                                </td>
+                                                <td class="font_r"> * 经营者姓名：</td>
+                                                <td>
+                                                    <input type="text">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="font_r"> 重点热点行业：</td>
+                                                <td>
+                                                    <input type="text">
+                                                </td>
+                                                <td class="font_r"> 风险行业：</td>
+                                                <td>
+                                                    <select>
+                                                                    <option>风险行业</option>
+                                                                    <option>风险行业</option>
+                                                                    <option>风险行业</option>
+                                                                    <option>风险行业</option>
+                                                                </select>
+                                                </td>
+                                                <td class="font_r"> * 经营者姓名：</td>
+                                                <td>
+                                                    <input type="text">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="font_r"> 重点热点行业：</td>
+                                                <td>
+                                                    <input type="text">
+                                                </td>
+                                                <td class="font_r"> 风险行业：</td>
+                                                <td>
+                                                    <select>
+                                                                    <option>风险行业</option>
+                                                                    <option>风险行业</option>
+                                                                    <option>风险行业</option>
+                                                                    <option>风险行业</option>
+                                                                </select>
+                                                </td>
+                                                <td class="font_r"> * 经营者姓名：</td>
+                                                <td>
+                                                    <input type="text">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="font_r">备注：</td>
+                                                <td colspan="5">
+                                                    <textarea cols="30" rows="10"></textarea>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="btn">
+                                        <button disabled="disabled">受理通知书</button>
+                                        <button disabled="disabled">暂存</button>
+                                        <button disabled="disabled">提交</button>
+                                        <button disabled="disabled">打印材料通知单</button>
+                                    </div>
+                                </div>
+
+                            </dd>
+
+                            <dt>主要经营场所证明 
+                                <img src="./img1/必须填.png" alt="">
+                            </dt>
+                            <dd>
+                                <div class="apply_from">
+                                    <p>个体户开业申请表</p>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td class="font_r"> * 名称：</td>
+                                                <td>
+                                                    <input type="text">
+                                                </td>
+                                                <td class="font_r">字号：</td>
+                                                <td>
+                                                    <input type="text">
+                                                </td>
+                                                <td class="font_r">企业类型中类：</td>
+                                                <td>
+                                                    <input type="text">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="font_r"> 个体工商户类型：</td>
+                                                <td>
+
+                                                    <span>
+                                                                <input type="radio" name="" id="">
+                                                                内地居民
+                                                            </span>
+                                                    <span>
+                                                                <input type="radio" name="" id="">
+                                                                台湾居民
+                                                            </span>
+                                                    <span>
+                                                                <input type="radio" name="" id="">
+                                                                香港居民
+                                                            </span>
+                                                    <span>
+                                                                <input type="radio" name="" id="">
+                                                                香港居民
+                                                            </span>
+                                                </td>
+                                                <td class="font_r"> * 行政区划：</td>
+                                                <td>
+                                                    <input type="text">
+                                                </td>
+                                                <td class="font_r"> * 行业类型：</td>
+                                                <td>
+                                                    <input type="text">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="font_r"> 重点热点行业：</td>
+                                                <td>
+                                                    <input type="text">
+                                                </td>
+                                                <td class="font_r"> 风险行业：</td>
+                                                <td>
+                                                    <select>
+                                                                <option>风险行业</option>
+                                                                <option>风险行业</option>
+                                                                <option>风险行业</option>
+                                                                <option>风险行业</option>
+                                                            </select>
+                                                </td>
+                                                <td class="font_r"> * 经营者姓名：</td>
+                                                <td>
+                                                    <input type="text">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="font_r"> 重点热点行业：</td>
+                                                <td>
+                                                    <input type="text">
+                                                </td>
+                                                <td class="font_r"> 风险行业：</td>
+                                                <td>
+                                                    <select>
+                                                                    <option>风险行业</option>
+                                                                    <option>风险行业</option>
+                                                                    <option>风险行业</option>
+                                                                    <option>风险行业</option>
+                                                                </select>
+                                                </td>
+                                                <td class="font_r"> * 经营者姓名：</td>
+                                                <td>
+                                                    <input type="text">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="font_r"> 重点热点行业：</td>
+                                                <td>
+                                                    <input type="text">
+                                                </td>
+                                                <td class="font_r"> 风险行业：</td>
+                                                <td>
+                                                    <select>
+                                                                    <option>风险行业</option>
+                                                                    <option>风险行业</option>
+                                                                    <option>风险行业</option>
+                                                                    <option>风险行业</option>
+                                                                </select>
+                                                </td>
+                                                <td class="font_r"> * 经营者姓名：</td>
+                                                <td>
+                                                    <input type="text">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="font_r">备注：</td>
+                                                <td colspan="5">
+                                                    <textarea cols="30" rows="10"></textarea>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="btn">
+                                    <button disabled="disabled">受理通知书</button>
+                                    <button disabled="disabled">暂存</button>
+                                    <button disabled="disabled">提交</button>
+                                    <button disabled="disabled">打印材料通知单</button>
+                                </div>
+                            </dd>
+
+                            <dt>负责人情况登记表
+                                <img src="./img1/必须填.png" alt="">
+                            </dt>
+                            <dd>
+
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam incidunt itaque mollitia eligendi, doloribus commodi a culpa ratione aspernatur!</p>
+
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae rerum molestiae laboriosam nobis odit.</p>
+
+                            </dd>
+
+                        </dl>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $(function() {
+        //手风琴
+        (function() {
+
+            $('dd').filter(':nth-child(n+4)').addClass('hide');
+
+            $('dl').on('click', 'dt', function() {
+                $(this).next().slideToggle(100);
+            });
+
+        })();
+
+    })
+</script>
+
+</html>

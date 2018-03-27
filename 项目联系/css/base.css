@@ -1,0 +1,127 @@
+body {
+    background: #F2F2F2;
+    font-family: 微软雅黑;
+    font-size: 0.93em;
+    overflow-x: hidden;
+}
+
+body,
+ol,
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html {
+    zoom: 1;
+}
+
+img {
+    border: none;
+    vertical-align: middle;
+}
+
+input {
+    outline: none;
+}
+
+select {
+    outline: none;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+/* 清除input获取焦点时后面的叉叉 */
+
+
+/* 谷歌的 */
+
+input::-webkit-search-cancel-button {
+    display: none;
+}
+
+
+/* IE的 */
+
+input::-ms-clear {
+    display: none;
+}
+
+
+/* 需要公共用的代码样式集合 */
+
+
+/* 宽度1366px */
+
+.w_1366 {
+    width: 1366px;
+    margin: 0 auto;
+}
+
+
+/* 宽度1190px */
+
+.w_1190 {
+    width: 1190px;
+    margin: 0 auto;
+}
+
+
+/* 字体样式 */
+
+.f14_w {
+    font-family: 微软雅黑;
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.f16_b {
+    font-family: 微软雅黑;
+    font-size: 16px;
+    color: #313131;
+}
+
+
+/* 代替mag-top的class */
+
+.top_10p {
+    width: 100%;
+    height: 10px;
+}
+
+
+/* mag-top:10px的class*/
+
+.mg_top10 {
+    margin-top: 10px;
+}

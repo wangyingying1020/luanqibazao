@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./lib/jquery.js"></script>
+    <style>
+        body{
+            display: flex;
+        }
+        li{
+            display: flex;
+        }
+       div{
+           width: 200px;
+           height: 200px;
+           background: yellow;
+           justify-content: center;
+           align-items: center;
+           display: none;
+           position: relative;
+           top: 0;
+           left: 0;
+       }
+    </style>
+    <script src="./lib/jquery.js"></script>
+</head>
+
+<body>
+    <ul>
+        <li><a href="javascript:;">点击1</a><div>1</div></li>
+        <li><a href="javascript:;">点击2</a><div>2</div></li>
+        <li><a href="javascript:;">点击3</a><div>3</div></li>
+        <li><a href="javascript:;">点击4</a><div>4</div></li>
+        <li><a href="javascript:;">点击5</a><div>5</div></li>
+    </ul>
+    
+    
+    
+    
+    
+</body>
+<script>
+    // $("a").mouseover(function(){
+    //     $("div").css("display","block")
+    // })
+    // var lis=document.querySelectorAll("li");
+    // var divs=document.querySelectorAll("div");
+    // for (var i=0;i<lis.length;i++) {
+    //     lis[i].index=i; 		
+    //     lis[i].onclick=function (){		 
+    //         for (var j=0;j<divs.length;j++) {
+    //             divs[j].style.display="none";		
+    //             divs[this.index].style.display="block";
+    //         }
+    //     }
+        
+    // }
+    $(function () { 
+        $("li").click(function(){
+            $("li").children("div").hide();
+            $(this).children("div").show();
+        })
+     })
+</script>
+</html>

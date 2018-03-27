@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function fun() {
+            console.log("这是一个函数。")
+        }
+
+        console.log(typeof fun); //打印出来是一个函数 function
+        console.log(fun instanceof Object); //true 所以一个函数即函数类型，同时也是对象类型
+
+        //现在我们定义一个构造函数 什么叫构造函数 有特定的属性和方法 内部定义的属性 方法基本都定义在Prototype上
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        Person.prototype.sayHello = function() {
+            console.log("你好呀")
+        }
+
+        //当你new出来一个函数时 还函数就是这个构造函数的实例对象，实力对象就能集成该构造函数上原型上的方法
+        var person = new Person();
+        person.sayHello();
+        console.dir(person.__proto__.constructor == Person); //实力对象的constructor等于构造函数本身
+        console.dir(Person.prototype.__proto__); //Object
+        console.dir(Object instanceof Function); //true
+        console.dir(Object instanceof Object); //true
+        console.dir(Array instanceof Function) //true
+        console.dir(Array.prototype.__proto__) //Object
+        console.dir(Array instanceof Object) //true
+
+        //所以可以说万物皆对象
+
+
+        var arr = [1, 2, 3];
+        console.log(arr instanceof Object);
+        console.dir(arr instanceof Function) //false
+
+
+        function add() {}
+        console.log(add instanceof Object) //true
+    </script>
+</body>
+
+</html>

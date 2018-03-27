@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./lib/jquery-1.7.1.min.js"></script>
+    <style>
+        #dv{
+            display: flex;
+            justify-content: space-between;
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div id="dv">
+        <div>
+            <button onclick="add(1)">点击1</button>
+            <button onclick="add(2)">点击2</button>
+            <button onclick="add(3)">点击3</button>
+        </div>
+        <div>
+            <button id="right">点我告诉他刚刚左边点了什么</button>
+        </div>
+    </div>
+</body>
+<script>
+    
+        var abc ;
+        function add(b) { 
+            abc=b;
+         };
+    $("#right").click(function () { 
+        alert(abc);
+     })
+
+</script>
+</html>

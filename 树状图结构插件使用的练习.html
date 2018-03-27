@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/ztree/css/zTreeStyle/zTreeStyle.css">
+    <script src="./lib/jquery-1.7.1.min.js"></script>
+    <script src="./lib/ztree/jquery.ztree.all-3.5.min.js"></script>
+</head>
+<body>
+    
+</body>
+<script>
+    var setting = {  
+        isSimpleData : true,              //数据是否采用简单 Array 格式，默认false  
+        treeNodeKey : "id",               //在isSimpleData格式下，当前节点id属性  
+        treeNodeParentKey : "pId",        //在isSimpleData格式下，当前节点的父节点id属性  
+        showLine : true,                  //是否显示节点间的连线  
+        checkable : true                  //每个节点上是否显示 CheckBox  
+    };  
+  
+    var treeNodes = [   
+        {"id":1, "pId":0, "name":"test1"},   
+        {"id":11, "pId":1, "name":"test11"},   
+        {"id":12, "pId":1, "name":"test12"},   
+        {"id":111, "pId":11, "name":"test111"},   
+    ]; 
+</script>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+    <style>
+        ul {
+            list-style: none;
+            display: flex;
+        }
+        
+        li {
+            margin: 0px 20px;
+            background: red;
+        }
+        
+        .abc {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="(item,index) in tab" :class="{abc:index==abc}" @click="tabclick(index)">
+                {{item}}
+            </li>
+        </ul>
+        <div v-for="(item,index) in content" v-show="index==abc">
+            {{item}}
+        </div>
+    </div>
+</body>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            tab: ["标题1", "标题2", "标题3"],
+            content: ["内容1", "2", "3"],
+            abc: 1,
+            abc: "abc",
+        },
+        created: function() {
+
+        },
+        methods: {
+            tabclick: function(index) {
+                this.abc = index;
+            },
+        },
+
+    })
+</script>
+
+</html>

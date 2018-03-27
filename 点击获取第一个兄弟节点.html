@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./lib/jquery-1.7.1.min.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <table>
+            <tr>
+                <td class="abc">hshhsbn</td>
+                <td><button>点击</button></td>
+            </tr>
+        </table>
+    </div>
+</body>
+<script>
+    $("button").click(function() {
+        alert($(this).parent("td").siblings(".abc").html());
+        console.log($(this).parent("td").siblings(".abc").html())
+    })
+</script>
+
+</html>

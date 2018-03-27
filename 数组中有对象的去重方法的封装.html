@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var oldArr = [{
+            id: 1,
+            name: "zhangs",
+            age: 18,
+            contact_id: 1
+        }, {
+            id: 1,
+            name: "zhangs",
+            age: 55,
+            contact_id: 2
+        }, {
+            id: 1,
+            name: "zhangs",
+            age: 18,
+            contact_id: 3
+        }, {
+            id: 1,
+            name: "zhangs",
+            age: 18,
+            contact_id: 14
+        }, {
+            id: 1,
+            name: "zhangs",
+            age: 18,
+            contact_id: 3
+        }, {
+            id: 1,
+            name: "zhangs",
+            age: 18,
+            contact_id: 2
+        }, {
+            id: 1,
+            name: "zhangs",
+            age: 18,
+            contact_id: 1
+        }];
+
+
+        var arrll = [{
+            name: "wangying",
+            age: 18
+        }, {
+            name: "wangying",
+            age: 16
+        }, {
+            name: "zhangpan",
+            age: 18
+        }, {
+            name: "zhangpan",
+            age: 16
+        }, {
+            name: "zhangpan",
+            age: 16
+        }]
+
+        // function removeRepetition(arr, arr2) {
+
+        //     $.each(arr,function(i,v){
+        //         var flag = true;
+        //         if(arr2.length > 0){
+        //             $.each(arr2,function(n,m){
+        //                 if(arr2[n].contact_id == arr[i].contact_id){flag = false;};
+        //             });
+        //         };
+        //         if(flag){
+        //             allArr.push(oldArr[i]);
+        //         };
+        //     });
+        //     return arr2;
+        // }
+
+        // console.log(removeRepetition(oldArr, all))
+
+
+        function obj2key(obj, keys) {
+            var n = keys.length,
+                key = [];
+            while (n--) {
+                key.push(obj[keys[n]]);
+            }
+            return key.join('|');
+        }
+        // 去重操作
+
+        function uniqeByKeys(array, keys) {
+            var arr = [];
+            var hash = {};
+            for (var i = 0, j = array.length; i < j; i++) {
+                var k = obj2key(array[i], keys);
+                if (!(k in hash)) {
+                    hash[k] = true;
+                    arr.push(array[i]);
+                }
+            }
+            return arr;
+        }
+
+
+        var arr = uniqeByKeys(oldArr, ['id', 'name', 'age', 'contact_id']);
+        // console.log(arr)
+        var arr1 = uniqeByKeys(arrll, ["name"])
+        console.log(arr1)
+    </script>
+</body>
+
+</html>
