@@ -45,7 +45,11 @@ export default {
         console.log(id);
         this.$store.commit("newauthor",id);
         console.log(this.$store.state.author+"haha");
-        this.$router.push("/home1/xq")
+        console.log(this.$store.state.isShow);
+        this.$router.push("/home1/xq");
+        this.$store.commit("newisShow",true);
+        console.log(this.$store.state.isShow);
+        
     }
   }
 }

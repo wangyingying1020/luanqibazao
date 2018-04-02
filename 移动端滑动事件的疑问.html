@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./lib/jquery-1.7.1.min.js"></script>
+    <style>
+        .title {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .list {
+            width: 100%;
+            height: 450px;
+            display: none;
+            box-sizing: border-box;
+            border: 1px solid #cccccc;
+            overflow-y: auto;
+            position: absolute;
+            top: 30px;
+            left: 0;
+        }
+        
+        ul {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="title">
+            <div>辩题栏</div>
+            <button>点击显示下拉框</button>
+        </div>
+        <div class="list">
+            <ul>
+                <li>dded</li>
+                <li>ffrf</li>
+                <li>dffdd</li>
+                <li>fdfd</li>
+                <li>cdfcd</li>
+                <li>cdfdf</li>
+                <li>dff</li>
+                <li>dded</li>
+                <li>ffrf</li>
+                <li>dffdd</li>
+                <li>fdfd</li>
+                <li>cdfcd</li>
+                <li>cdfdf</li>
+                <li>dff</li>
+                <li>dded</li>
+                <li>ffrf</li>
+                <li>dffdd</li>
+                <li>fdfd</li>
+                <li>cdfcd</li>
+                <li>cdfdf</li>
+                <li>dff</li>
+                <li>fdfd</li>
+                <li>cdfcd</li>
+                <li>cdfdf</li>
+                <li>dff</li>
+                <li>dded</li>
+                <li>ffrf</li>
+                <li>dffdd</li>
+                <li>fdfd</li>
+                <li>cdfcd</li>
+                <li>cdfdf</li>
+                <li>dff</li>
+                <li>dded</li>
+                <li>ffrf</li>
+                <li>dffdd</li>
+                <li>fdfd</li>
+                <li>cdfcd</li>
+                <li>cdfdf</li>
+                <li>dff</li>
+                <li>fdfd</li>
+                <li>cdfcd</li>
+                <li>cdfdf</li>
+                <li>dff</li>
+                <li>dded</li>
+                <li>ffrf</li>
+                <li>dffdd</li>
+                <li>fdfd</li>
+                <li>cdfcd</li>
+                <li>cdfdf</li>
+                <li>dff</li>
+                <li>dded</li>
+                <li>ffrf</li>
+                <li>dffdd</li>
+                <li>fdfd</li>
+                <li>cdfcd</li>
+                <li>cdfdf</li>
+                <li>dff</li>
+            </ul>
+        </div>
+        <div class="conten">
+            <p>内容</p>
+            <p>内容</p>
+            <p>内容</p>
+            <p>内容</p>
+            <p>内容</p>
+            <p>内容</p>
+            <p>内容</p>
+            <p>内容</p>
+            <p>内容</p>
+            <p>内容</p>
+            <p>内容</p>
+            <p>内容</p>
+            <p>内容</p>
+            <p>内容</p>
+            <p>内容</p>
+            <p>内容</p>
+            <p>内容</p>
+            <p>内容</p>
+            <p>内容</p>
+            <p>内容</p>
+            <p>内容</p>
+            <p>内容</p>
+            <p>内容</p>
+            <p>内容</p>
+            <p>内容</p>
+            <p>内容</p>
+
+        </div>
+    </div>
+
+</body>
+<script>
+    $(function() {
+        var is = false;
+        $("button").click(function() {
+            if (is == false) {
+                $(".list").show();
+                $(".list").on("touchmove", function(event) {
+                    event.stopPropagation();
+                });
+                is = true;
+            } else {
+                $(".list").hide();
+                /* $(".conten").off("touchmove"); */
+                is = false;
+            }
+        });
+
+    })
+</script>
+
+</html>

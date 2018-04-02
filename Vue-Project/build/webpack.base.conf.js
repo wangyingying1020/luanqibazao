@@ -66,7 +66,24 @@ module.exports = {
             {
                 test: /\.less$/,
                 loader: "style-loader!css-loader!less-loader",
-            }
+            },
+            {
+                test: /\.less$/,
+                loader: "style-loader!css-loader!less-loader",
+            },
+            {
+                test: /\.css$/,
+                include: [
+                    /theme-chalk/, //表示在src目录下的css需要编译  
+                    '/node_modules/element-ui/lib/' //增加此项  
+                ],
+                loader: 'style-loader!css-loader',
+                exclude: /node_modules/
+            },
+            {
+                test: /\.(eot|svg|ttf|woff|woff2)(\?\S*)?$/,
+                loader: 'file-loader'
+            },
         ]
     },
     node: {

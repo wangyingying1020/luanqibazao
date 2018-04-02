@@ -7,10 +7,14 @@ const store = new Vuex.Store({
     // 定义状态
     state: {
         author: '',
+        isShow: false,
     },
     mutations: {
         newauthor: function(state, msg) {
             state.author = msg;
+        },
+        newisShow: function(state, msg) {
+            state.isShow = msg;
         }
     }
 })

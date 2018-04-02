@@ -10,7 +10,7 @@
       </div>
       <div class="bottom">
         <ul>
-          <router-link  to="home1" tag="li" >正在热映</router-link>
+          <router-link  to="home1" tag="li" :class="{xz:lala}">正在热映</router-link>
           <router-link  to="home2" tag="li">即将上映</router-link>
           <router-link  to="home3" tag="li">top25</router-link>
           <router-link  to="home4" tag="li">口碑榜</router-link>
@@ -23,15 +23,34 @@
        <div class="con">
         <router-view></router-view>
       </div>
+      <button @click="haha">点击弹框</button>
+      <mt-button type="default">default</mt-button>
+      <mt-button type="danger">danger</mt-button>
+      <haha1></haha1>
   </div>
 </template>
 <script>
+import { Toast,Indicator  } from 'mint-ui';
+import haha from "./mui"
 export default {
   data(){
       return{
-
+       /*  xz:"xz" */
       }
-  }
+  },
+  methods:{
+    haha(){
+      Indicator.open('加载中...');
+    }
+  },
+   components: {
+     haha1:haha
+  },
+    computed: {
+      lala () {
+        return this.$store.state.isShow;
+      }
+    }
 }
 </script>
 <style scoped>

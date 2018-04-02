@@ -6,12 +6,17 @@ import router from './router/index'
 import Vuex from 'vuex'
 import store from './vuex/store'
 import axios from 'axios'
+import MintUi from "mint-ui"
+/* import ElementUI from 'element-ui'; */
+/* import 'element-ui/lib/theme-chalk/index.css'; */
 import App from './App'
 
 
 
 Vue.use(Vuex)
 Vue.use(VueRouter)
+Vue.use(MintUi)
+    /* Vue.use(ElementUI) */
 Vue.prototype.$ajax = axios
 
 

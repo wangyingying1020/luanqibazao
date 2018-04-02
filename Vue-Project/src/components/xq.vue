@@ -1,7 +1,7 @@
 <template>
   <div class="main">
      <div class="con">
-          <img :src="list.images.large" alt="">
+          <img :src="list.images.small" alt="">
       <div class="title">
           {{list.title}}
       </div>

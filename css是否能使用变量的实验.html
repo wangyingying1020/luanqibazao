@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+         :root {
+            --width1: 50;
+            --hei: 50px;
+        }
+        
+        .dv1 {
+            width: calc(var(--width1)*20px);
+            height: calc(var(--width1)*10px);
+            background: red;
+        }
+        
+        .dv2 {
+            width: calc(var(--width1)*10px);
+            height: calc(var(--width1)*20px);
+            background: yellow;
+        }
+        
+        .dv3 {
+            width: var(--hei);
+            height: var(--hei);
+            background: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dv1">css的变量的定义:--变量名:变量值</div>
+    <div class="dv2">css变量的使用：var(--变量名)</div>
+    <div class="dv3">css变量的修改：calc(var(--变量名)*需要连接的值)</div>
+</body>
+
+</html>

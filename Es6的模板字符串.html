@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./lib/jquery-1.7.1.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <button>haha</button>
+    </div>
+    <script>
+        const abc = '这就是一个关于模板字符串的实验';
+        let str = `<button>${abc}</button>`;
+        $("div").append(str);
+        $("button").click(() => {
+            console.log("abc");
+        })
+    </script>
+
+</body>
+
+</html>
