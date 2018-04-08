@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./lib/jquery-1.7.1.min.js"></script>
+</head>
+
+<body>
+    <script>
+        /* 将两个数组合并、去重、排序并打乱 */
+        var arr = [1, 2, 3, 4, 5, 1];
+        var strArr = ["a", "b", "b", "c"];
+
+        function Arr(arr1, arr2) {
+            //合并数组
+            var arr = arr1.concat(arr2);
+            //将合并之后的数组进行排序
+            var haha = arr.sort();
+            //数组去重
+            var lala = [];
+            haha.forEach(function(tiem, index) {
+                if (lala.indexOf(tiem) == -1) {
+                    lala.push(tiem)
+                }
+            });
+            console.log(lala)
+            var ff = [];
+            lala.forEach(function(tiem, index) {
+                alert(index % 2 == 0)
+                if (index % 2 == 0) {
+                    ff.push(tiem);
+                } else {
+                    ff.unshift(tiem)
+                }
+            });
+            return ff;
+
+        }
+        console.log(Arr(arr, strArr));
+
+
+        /* 计算给定数组 arr 中所有元素的总和 */
+        var arr1 = [1, 2, 5, 4]
+
+        function Arr1(arr) {
+            var num;
+            arr.forEach(function(tiem, index) {
+                if (index == 0) {
+                    num = tiem;
+                } else {
+                    num = num + tiem
+                }
+            });
+            return num;
+        }
+        console.log(Arr1(arr1));
+
+
+
+        /* 封装一个函数 检测一个值在数组中出现的位置 有则返回对应的位置  无则返回-1 */
+        var gg = [1, 5, 6]
+
+        function Arr2(arr, tiem) {
+            var num = -1;
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] == tiem) {
+                    num = i;
+                }
+            }
+            return num;
+        }
+        console.log(Arr2(gg, 6))
+    </script>
+</body>
+
+</html>

@@ -133,16 +133,17 @@
 <script>
     $(function() {
         var is = false;
+
         $("button").click(function() {
             if (is == false) {
                 $(".list").show();
-                $(".list").on("touchmove", function(event) {
-                    event.stopPropagation();
+                $(".conten").on("touchmove", function(event) {
+                    event.preventDefault();
                 });
                 is = true;
             } else {
                 $(".list").hide();
-                /* $(".conten").off("touchmove"); */
+                $(".conten").off("touchmove");
                 is = false;
             }
         });

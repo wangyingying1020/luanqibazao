@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./lib/jquery-1.7.1.min.js"></script>
+</head>
+
+<body>
+
+</body>
+<script>
+    /* 关于this指向的问题 */
+    var Person = function() {
+        console.log(this)
+    }
+    new Person() //构造函数的对象的this指向构造函数本身
+    setTimeout(function() {
+        console.log(this)
+    }, 200); /* 定时器内部的this指向window */
+
+    var obj = {
+        abc: function() {
+            console.log(this)
+        }
+    }
+    obj.abc(); /* 通过对象调用对象的成员函数 那么该函数的this指向该对象 */
+    var haha = obj.abc;
+    haha(); /* 如果想对象的函数体直接赋值给一个变量 那么里面的this直接指向window */
+</script>
+
+</html>
