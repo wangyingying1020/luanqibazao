@@ -180,19 +180,19 @@
 <script>
     $(function() {
         //tab默认的显示
-        var inedx = 0;
+        var index = 0;
         //给默认显示的导航加class 加样式
-        $("li").eq(inedx).addClass("red").siblings("li").removeClass("red");
+        $("li").eq(index).addClass("red").siblings("li").removeClass("red");
         //让对应的内容显示 其余的内容隐藏
-        $(".con_list").eq(inedx).show().siblings(".con_list").hide();
-        console.log($(".con_list").eq(inedx).find("input"));
+        $(".con_list").eq(index).show().siblings(".con_list").hide();
+        console.log($(".con_list").eq(index).find("input"));
 
         function haha() {
             //当输入框失去焦点的时候 （多个输入框）
-            $(".con_list").eq(inedx).find("input").blur(function() {
+            $(".con_list").eq(index).find("input").blur(function() {
 
                 var numArr = []; // 定义一个空数组
-                var txt = $(".con_list").eq(inedx).find("input"); //获取所有的输入框 
+                var txt = $(".con_list").eq(index).find("input"); //获取所有的输入框 
                 for (var i = 0; i < txt.length; i++) {
                     numArr.push(txt.eq(i).val()); // 将文本框的值添加到数组中
                 }
@@ -268,14 +268,14 @@
 
                 //已经填写完毕 存放空字符串的数组的长度为0 再对特别的姓名、电话做检验等 再给对应的li加样式
                 if (isArr.length == 0) {
-                    if (inedx == 0) {
+                    if (index == 0) {
                         var pattern = /^[\u4e00-\u9fa5]{2,4}$/;
                         if (!pattern.test(isArr1[0])) {
-                            $("li").eq(inedx).addClass("yellow").removeClass("blue");
+                            $("li").eq(index).addClass("yellow").removeClass("blue");
 
 
                         } else {
-                            $("li").eq(inedx).addClass("blue").removeClass("yellow");
+                            $("li").eq(index).addClass("blue").removeClass("yellow");
                             /* $(this).siblings("span").css({
                                 "background": "pink",
                                 "display": "block",
@@ -283,28 +283,28 @@
                         }
                     }
 
-                    if (inedx == 1) {
+                    if (index == 1) {
                         var pattern1 = /^[1][3,4,5,7,8][0-9]{9}$/;
                         if (!pattern1.test(isArr1[0])) {
-                            $("li").eq(inedx).addClass("yellow").removeClass("blue");
+                            $("li").eq(index).addClass("yellow").removeClass("blue");
 
 
                         } else {
-                            $("li").eq(inedx).addClass("blue").removeClass("yellow");
+                            $("li").eq(index).addClass("blue").removeClass("yellow");
                             /* $(this).siblings("span").css({
                                 "background": "pink",
                                 "display": "block",
                             }) */
                         }
-                    } else if (inedx !== 0 && inedx !== 1) {
-                        $("li").eq(inedx).addClass("blue").removeClass("yellow");
+                    } else if (index !== 0 && index !== 1) {
+                        $("li").eq(index).addClass("blue").removeClass("yellow");
                     }
 
 
                 } else {
                     //这是有未填写的
                     /* $(this).siblings("span").css("display", "block") */
-                    $("li").eq(inedx).addClass("yellow").removeClass("blue");
+                    $("li").eq(index).addClass("yellow").removeClass("blue");
                 }
 
             });
@@ -313,9 +313,9 @@
 
         $("li").click(function() {
 
-            inedx = $(this).index();
-            $("li").eq(inedx).addClass("red").siblings("li").removeClass("red");
-            $(".con_list").eq(inedx).show().siblings(".con_list").hide();
+            index = $(this).index();
+            $("li").eq(index).addClass("red").siblings("li").removeClass("red");
+            $(".con_list").eq(index).show().siblings(".con_list").hide();
 
 
             haha();
